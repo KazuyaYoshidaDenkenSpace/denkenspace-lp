@@ -4,56 +4,75 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      {/* ヘッダー */}
+      {/* ===== ヘッダー ===== */}
       <header className="header">
-        <h1>Denkenspace</h1>
-        <p>あなたのWebアイデアを形にします</p>
+        <div className="container">
+          <h1 className="site-title">Denkenspace</h1>
+          <p className="site-tagline">あなたのWebアイデアを形にします</p>
+        </div>
       </header>
 
-      {/* メインセクション */}
-      <main className="main">
-        <section className="intro">
-          <h2>サービス紹介</h2>
-          <p>
-            私たちは最新のWeb技術を駆使して、魅力的なランディングページを作成します。
-          </p>
+      {/* ===== メインコンテンツ ===== */}
+      <main>
+        {/* サービス紹介 */}
+        <section className="section intro">
+          <div className="container">
+            <h2>サービス紹介</h2>
+            <p>
+              最新のWeb技術を活用し、魅力的で成果の出るランディングページを制作いたします。
+            </p>
+          </div>
         </section>
 
-        <section className="features">
-          <h2>特徴</h2>
-          <ul>
-            <li>簡単に更新可能</li>
-            <li>スマホ対応のレスポンシブデザイン</li>
-            <li>高速表示でユーザーにストレスなし</li>
-          </ul>
+        {/* 特徴 */}
+        <section className="section features">
+          <div className="container">
+            <h2>特徴</h2>
+            <ul>
+              <li>誰でも簡単に更新可能</li>
+              <li>スマホ・タブレット対応のレスポンシブデザイン</li>
+              <li>高速表示でユーザー体験を向上</li>
+            </ul>
+          </div>
         </section>
 
-        <section className="contact">
-          <h2>お問い合わせ</h2>
-          <form
-            action="https://formspree.io/f/your-form-id"
-            method="POST"
-          >
-            <input type="text" name="name" placeholder="お名前" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="メールアドレス"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="お問い合わせ内容"
-              required
-            />
-            <button type="submit">送信</button>
-          </form>
+        {/* お問い合わせフォーム */}
+        <section className="section contact">
+          <div className="container">
+            <h2>お問い合わせ</h2>
+            <form
+              action="https://formspree.io/f/your-form-id"
+              method="POST"
+              className="contact-form"
+            >
+              <div className="form-group">
+                <label htmlFor="name">お名前</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">お問い合わせ内容</label>
+                <textarea id="message" name="message" rows="5" required />
+              </div>
+
+              <button type="submit" className="btn-primary">
+                送信
+              </button>
+            </form>
+          </div>
         </section>
       </main>
 
-      {/* フッター */}
+      {/* ===== フッター ===== */}
       <footer className="footer">
-        <p>&copy; 2025 Denkenspace. All rights reserved.</p>
+        <div className="container">
+          <p>&copy; {new Date().getFullYear()} Denkenspace. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
