@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 
 function App() {
@@ -57,7 +56,7 @@ function App() {
 
               <div className="form-group">
                 <label htmlFor="message">お問い合わせ内容</label>
-                <textarea id="message" name="message" rows="5" required />
+                <textarea id="message" name="message" rows={5} required />
               </div>
 
               <button type="submit" className="btn-primary">
