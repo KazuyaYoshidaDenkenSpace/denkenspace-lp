@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-gray-200 py-8 text-center text-gray-700">
       <div className="space-x-4 mb-4">
@@ -14,7 +17,12 @@ const Footer: React.FC = () => {
           Instagram
         </a>
       </div>
-      <p>&copy; 2025 株式会社デンケンスペース. All rights reserved.</p>
+      <p>
+        {t(
+          "footer.copy",
+          "© 2025 株式会社デンケンスペース. All rights reserved."
+        )}
+      </p>
     </footer>
   );
 };

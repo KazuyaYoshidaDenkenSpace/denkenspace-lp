@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Denkenspace Inc."
+  },
+  "header": {
+    "logo": "Company Logo",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Denkenspace Inc.",
+    "subtitle": "Connecting the Future with Japanese Tradition and IT"
+  },
+  "services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Web Development",
+        "desc": "Web system development with PHP & React",
+        "img": "/programming.png"
+      },
+      {
+        "title": "Landing Page Design",
+        "desc": "Building high-quality, conversion-focused pages",
+        "img": "/lp.png"
+      },
+      {
+        "title": "Food & Trading",
+        "desc": "Online sales of Japanese sweets",
+        "img": "/wagashi.png"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "items": [
+      { "title": "Company Name", "content": "Denkenspace Inc." },
+      { "title": "Founded", "content": "February 2024" },
+      { "title": "CEO", "content": "Kazuya Yoshida" },
+      {
+        "title": "Location",
+        "content": "Mutsumi Building 3F, 2-10-48 Kitakochi, Nishi-ku, Yokohama, Kanagawa, 220-0004, Japan"
+      }
+    ]
+  },
+  "message": {
+    "title": "Message from the CEO",
+    "body": "Through IT, we aim to share the charm of Japan with the world.\nIn particular, I truly love traditional Japanese sweets, and I believe they have the potential to be enjoyed by many more people.\nBy using digital technology, we will deliver this culture across borders and create a future where more people can savor it.",
+    "ceo": "Kazuya Yoshida, CEO"
+  },
+  "contact": {
+    "title": "Contact Us"
+  },
+  "footer": {
+    "copy": "© 2025 Denkenspace Inc. All rights reserved."
+  }
+}

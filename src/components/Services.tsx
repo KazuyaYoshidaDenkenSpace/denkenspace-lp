@@ -1,47 +1,61 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Services: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const { t } = useTranslation();
 
-  const services = [
-    { title: "サービス1", desc: "サービス1の説明文" },
-    { title: "サービス2", desc: "サービス2の説明文" },
-    { title: "サービス3", desc: "サービス3の説明文" },
-  ];
+  // 配列を JSON から取得
+  const services = t("services.items", { returnObjects: true }) as {
+    title: string;
+    desc: string;
+    img: string;
+  }[];
 
   return (
-    <section className="w-full max-w-6xl px-6 py-12 flex flex-col items-center">
-      <button
-        className="px-6 py-4 bg-blue-600 text-white font-bold rounded hover:bg-blue-700 transition"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        サービス紹介
-      </button>
-
+    <section className="relative w-full max-w-6xl px-6 py-12 flex flex-col items-center">
+      {/* 背景（hoverで切り替わる） */}
       <AnimatePresence>
-        {isOpen && (
+        {selectedImg && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="w-full mt-6 overflow-hidden"
-          >
-            <div className="grid md:grid-cols-3 gap-8 w-full">
-              {services.map((s, i) => (
-                <div
-                  key={i}
-                  className="p-6 bg-gray-100 rounded shadow text-center mx-auto"
-                >
-                  <h3 className="text-2xl font-semibold mb-2">{s.title}</h3>
-                  <p className="text-gray-700">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+            key={selectedImg}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-0 -z-10 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${selectedImg})`,
+            }}
+          />
         )}
       </AnimatePresence>
+
+      {/* 背景の暗めオーバーレイ（選択中のみ） */}
+      {selectedImg && <div className="absolute inset-0 -z-10 bg-black/40" />}
+
+      {/* サービス一覧（常に表示） */}
+      <div className="w-full mt-6">
+        <div className="grid md:grid-cols-3 gap-8 w-full">
+          {services.map((s, i) => (
+            <div
+              key={i}
+              className="relative p-6 rounded shadow text-center mx-auto h-48 flex flex-col justify-center items-center 
+                         bg-white/80 hover:bg-white/60 transition cursor-pointer"
+              onMouseEnter={() => setSelectedImg(s.img)}
+              onMouseLeave={() => setSelectedImg(null)}
+            >
+              <div className="relative z-10">
+                <h3 className="text-2xl font-semibold mb-2 text-gray-900">
+                  {s.title}
+                </h3>
+                <p className="text-gray-700">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

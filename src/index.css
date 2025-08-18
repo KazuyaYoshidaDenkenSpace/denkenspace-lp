@@ -21,6 +21,13 @@
   --font-sans: "Noto Sans JP";
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 横スクロール防止 */
+}
+
 body {
   /* デフォルト値: フォント, 背景色, 文字の色 */
   @apply font-sans bg-bk text-text;
