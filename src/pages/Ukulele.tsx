@@ -29,11 +29,16 @@ export default function Ukulele() {
       </div>
       {/* ヒーロー */}
       <section className="text-center py-28 bg-orange-200 relative z-10">
-        <h1 className="text-5xl font-extrabold text-orange-900 mb-4">
-          デンケン ウクレレ教室
+        <h1 className="text-5xl font-extrabold text-orange-900 mb-4 leading-tight">
+          デンケン
+          <br />
+          ウクレレ教室
         </h1>
         <p className="text-xl text-orange-800 max-w-2xl mx-auto mb-8">
-          初心者から経験者まで楽しめるウクレレ教室。音楽の楽しさを一緒に体感しましょう！
+          初心者から経験者まで楽しめるウクレレ教室です。
+        </p>
+        <p className="text-xl text-orange-800 max-w-2xl mx-auto mb-8">
+          音楽の楽しさを一緒に体感しましょう！
         </p>
 
         {/* アクションボタン */}
