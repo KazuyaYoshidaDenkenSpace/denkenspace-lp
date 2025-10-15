@@ -12,9 +12,13 @@ const Header: React.FC = () => {
       {/* 横幅を max-w-6xl に制限しつつ中央寄せ。高さ h-20 */}
       <div className="max-w-6xl mx-auto flex items-center justify-between h-20 px-6">
         {/* 左側：ロゴ */}
-        <div className="text-3xl font-extrabold text-white tracking-wide">
-          {/* 翻訳キー "header.logo" があれば使い、なければ "会社ロゴ" を表示 */}
-          {t("header.logo", "会社ロゴ")}
+        <div className="text-3xl font-extrabold tracking-wide">
+          {/* 画像として表示 */}
+          <img
+            src={t("header.logoImg", "/img/logo.png")}
+            alt={t("header.logo", "会社ロゴ")}
+            className="h-12" // 高さを調整
+          />
         </div>
 
         {/* 右側：ナビゲーション + 言語切替ボタン */}
