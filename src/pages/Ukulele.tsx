@@ -10,60 +10,67 @@ export default function Ukulele() {
         ogDescription="初心者向けウクレレ教室の案内ページです。"
       />
 
-      {/* 落ち葉アニメーション */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        {[...Array(10)].map((_, i) => (
-          <img
-            key={i}
-            src="/img/ukulele/maple_leaf.png" // 紅葉のSVG
-            className="absolute w-6 h-6 animate-fall-leaf"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              width: `${20 + Math.random() * 20}px`,
-              height: `${20 + Math.random() * 20}px`,
-            }}
-            alt="紅葉"
-          />
-        ))}
-      </div>
       {/* ヒーロー */}
-      <section className="text-center py-28 bg-orange-200 relative z-10">
-        <h1 className="text-5xl font-extrabold text-orange-900 mb-4 leading-tight">
-          デンケン
-          <br />
-          ウクレレ教室
-        </h1>
-        <p className="text-xl text-orange-800 max-w-2xl mx-auto mb-8">
-          初心者から経験者まで楽しめるウクレレ教室です。
-        </p>
-        <p className="text-xl text-orange-800 max-w-2xl mx-auto mb-8">
-          音楽の楽しさを一緒に体感しましょう！
-        </p>
+      <section className="relative h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden">
+        {/* 背景画像（秋の雰囲気） */}
+        <img
+          src="/img/ukulele/ukulele.png"
+          alt="ウクレレ教室背景"
+          className="absolute inset-0 w-full h-full object-cover brightness-75 z-0"
+        />
 
-        {/* アクションボタン */}
-        <div className="flex justify-center gap-6">
-          <a
-            href="https://docs.google.com/forms/d/XXXXX/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-orange-600 text-white font-bold rounded-lg shadow hover:bg-orange-700 transition"
-          >
-            お問い合わせフォーム
-          </a>
-          <a
-            href="https://www.instagram.com/denkenspace"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-pink-500 text-white font-bold rounded-lg shadow hover:bg-pink-600 transition flex items-center gap-2"
-          >
+        {/* 落ち葉アニメーション（背景の上、タイトルの下） */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-5">
+          {[...Array(10)].map((_, i) => (
             <img
-              src="img/common/instagram.png"
-              alt="Instagram"
-              className="w-5 h-5"
+              key={i}
+              src="/img/ukulele/maple_leaf.png"
+              alt="紅葉"
+              className="absolute animate-fall-leaf"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${-20 + Math.random() * 15}vh`, // -20vh ～ -5vh の範囲でスタート
+                width: `${24 + Math.random() * 24}px`,
+                height: `${24 + Math.random() * 24}px`,
+                animationDelay: `${Math.random() * 6}s`,
+              }}
             />
-            Instagram
-          </a>
+          ))}
+        </div>
+
+        {/* タイトルとボタン */}
+        <div className="relative z-10 text-white drop-shadow-xl">
+          <h1 className="text-6xl font-extrabold leading-tight mb-6">
+            デンケン
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">
+              ウクレレ教室
+            </span>
+          </h1>
+          <p className="text-2xl mb-8">音楽の秋、一緒に奏でよう。</p>
+
+          {/* ボタン */}
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://forms.gle/a7JAF9tC2efurPhC8"
+              className="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg shadow-lg hover:bg-orange-700 transition"
+            >
+              申し込み
+            </a>
+            <a
+              href="https://www.instagram.com/denkenspace"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-pink-500 text-white font-bold rounded-lg shadow-lg hover:bg-pink-600 transition flex items-center gap-2"
+            >
+              <img
+                src="img/common/instagram.png"
+                alt="Instagram"
+                className="w-5 h-5"
+              />
+              Instagram
+            </a>
+          </div>
         </div>
       </section>
 
@@ -138,7 +145,7 @@ export default function Ukulele() {
         <h2 className="text-3xl font-bold mb-6 text-center">お問い合わせ</h2>
         <div className="max-w-2xl mx-auto flex flex-col gap-4 items-center">
           <a
-            href="https://docs.google.com/forms/d/XXXXX/viewform"
+            href="https://forms.gle/jf8uH5WyrrC6v7N47"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition"
@@ -168,15 +175,25 @@ export default function Ukulele() {
 
       <style>
         {`
-@keyframes fall-leaf {
-  0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
-  50% { transform: translateY(50vh) rotate(180deg); }
-  100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
-}
-.animate-fall-leaf {
-  animation: fall-leaf 8s linear infinite;
-}
-`}
+        @keyframes fall-leaf {
+          0% {
+            transform: translateY(-10vh) rotate(0deg);
+            opacity: 1;
+          }
+          50% {
+            transform: translateY(60vh) rotate(180deg);
+            opacity: 0.9;
+          }
+          100% {
+            transform: translateY(120vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+
+        .animate-fall-leaf {
+          animation: fall-leaf 10s linear infinite;
+        }
+        `}
       </style>
     </div>
   );
