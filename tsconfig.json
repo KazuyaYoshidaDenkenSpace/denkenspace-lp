@@ -8,7 +8,11 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "rootDir": "src", // ソースのルート
+    "outDir": "dist", // コンパイル後の JS 出力先
+    "allowJs": false, // JS をコンパイル対象にしない
+    "declaration": true // 型定義ファイルも出力（必要なら）
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
