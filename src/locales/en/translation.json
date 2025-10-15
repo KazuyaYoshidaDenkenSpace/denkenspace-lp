@@ -1,6 +1,11 @@
 {
   "meta": {
-    "title": "Denkenspace Inc."
+    "title": "Denkenspace Inc.",
+    "description": "Denkenspace Inc. connects Japanese tradition with IT for the future. We provide web development, landing pages, and Japanese sweets trading.",
+    "keywords": "Denkenspace, web development, landing page, Japanese sweets, trade, IT, Japanese culture",
+    "ogTitle": "Denkenspace Inc.",
+    "ogDescription": "Connecting Japanese tradition and IT for the future.",
+    "ogImage": "/img/ogp-en.png"
   },
   "header": {
     "logo": "Company Logo",
@@ -10,7 +15,7 @@
   },
   "hero": {
     "title": "Denkenspace Inc.",
-    "subtitle": "Connecting the Future with Japanese Tradition and IT"
+    "subtitle": "The world may hold few pleasures, but joy depends on the heart."
   },
   "services": {
     "title": "Our Services",

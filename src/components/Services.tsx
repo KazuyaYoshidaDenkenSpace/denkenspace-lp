@@ -6,16 +6,15 @@ const Services: React.FC = () => {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const { t } = useTranslation();
 
-  // 配列を JSON から取得
-  const services = t("services.items", { returnObjects: true }) as {
-    title: string;
-    desc: string;
-    img: string;
-  }[];
+  // i18n から配列を安全に取得
+  const services =
+    (t("services.items", { returnObjects: true }) as
+      | { title: string; desc: string; img: string }[]
+      | undefined) || [];
 
   return (
     <section className="relative w-full max-w-6xl px-6 py-12 flex flex-col items-center">
-      {/* 背景（hoverで切り替わる） */}
+      {/* 背景の切り替え */}
       <AnimatePresence>
         {selectedImg && (
           <motion.div
@@ -25,23 +24,21 @@ const Services: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
             className="absolute inset-0 -z-10 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${selectedImg})`,
-            }}
+            style={{ backgroundImage: `url(${selectedImg})` }}
           />
         )}
       </AnimatePresence>
 
-      {/* 背景の暗めオーバーレイ（選択中のみ） */}
+      {/* 背景オーバーレイ */}
       {selectedImg && <div className="absolute inset-0 -z-10 bg-black/40" />}
 
-      {/* サービス一覧（常に表示） */}
-      <div className="w-full mt-6">
-        <div className="grid md:grid-cols-3 gap-8 w-full">
+      {/* サービス一覧 */}
+      <div className="w-full mt-6 flex flex-col items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {services.map((s, i) => (
             <div
               key={i}
-              className="relative p-6 rounded shadow text-center mx-auto h-48 flex flex-col justify-center items-center 
+              className="relative p-6 rounded shadow text-center mx-auto h-48 flex flex-col justify-center items-center
                          bg-white/80 hover:bg-white/60 transition cursor-pointer"
               onMouseEnter={() => setSelectedImg(s.img)}
               onMouseLeave={() => setSelectedImg(null)}

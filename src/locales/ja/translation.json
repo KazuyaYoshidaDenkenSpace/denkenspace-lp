@@ -1,16 +1,22 @@
 {
   "meta": {
-    "title": "株式会社デンケンスペース"
+    "title": "株式会社デンケンスペース",
+    "description": "日本の伝統とITで未来をつなぐ株式会社デンケンスペース。Web制作・ランディングページ・食品貿易事業を展開しています。",
+    "keywords": "デンケンスペース, Web制作, ランディングページ, 和菓子, 貿易, IT, 日本文化",
+    "ogTitle": "株式会社デンケンスペース",
+    "ogDescription": "日本の伝統とITで未来をつなぐ株式会社デンケンスペース。",
+    "ogImage": "/img/ogp-ja.png"
   },
   "header": {
     "logo": "会社ロゴ",
+    "logoImg": "/img/logo.png",
     "services": "サービス紹介",
     "about": "会社情報",
     "contact": "お問い合わせ"
   },
   "hero": {
     "title": "株式会社\nデンケン\nスペース",
-    "subtitle": "日本の伝統とITで、未来をつなぐ"
+    "subtitle": "面白きこともなき世に面白くすみなすものは心なりけり"
   },
   "services": {
     "title": "サービス紹介",
