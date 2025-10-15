@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
       {/* 背景画像 */}
       <div
         className="absolute inset-0 bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: `url(/img/washi-texture.png)` }}
+        style={{ backgroundImage: `url(/img/hp/washi-texture.png)` }}
       />
       <div className="absolute inset-0 bg-white/40" />
 

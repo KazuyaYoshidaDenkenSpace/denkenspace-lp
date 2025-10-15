@@ -9,8 +9,10 @@
   },
   "header": {
     "logo": "Company Logo",
+    "logoImg": "/img/common/logo.png",
     "services": "Services",
     "about": "About Us",
+    "message": "message",
     "contact": "Contact"
   },
   "hero": {
@@ -23,17 +25,17 @@
       {
         "title": "Web Development",
         "desc": "Web system development with PHP & React",
-        "img": "/programming.png"
+        "img": "img/hp/programming.png"
       },
       {
         "title": "Landing Page Design",
         "desc": "Building high-quality, conversion-focused pages",
-        "img": "/lp.png"
+        "img": "img/hp/lp.png"
       },
       {
         "title": "Food & Trading",
         "desc": "Online sales of Japanese sweets",
-        "img": "/wagashi.png"
+        "img": "img/hp/wagashi.png"
       }
     ]
   },

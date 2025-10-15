@@ -17,7 +17,7 @@ const Message: React.FC = () => {
              hover:bg-[#234E89] transition"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {t("message.button", "代表メッセージ")}
+        {t("message.title", "代表メッセージ")}
       </button>
 
       {/* アニメーション付きで開閉 */}
@@ -34,7 +34,7 @@ const Message: React.FC = () => {
               {/* 写真 */}
               <div className="w-full md:w-1/3 flex justify-center">
                 <img
-                  src="/img/ceo.png"
+                  src="/img/hp/ceo.png"
                   alt="代表写真"
                   className="rounded-2xl shadow-lg w-48 h-48 object-cover md:w-64 md:h-64"
                 />

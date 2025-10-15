@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         <div className="text-3xl font-extrabold tracking-wide">
           {/* 画像として表示 */}
           <img
-            src={t("header.logoImg", "/img/logo.png")}
+            src={t("header.logoImg", "/img/common/logo.png")}
             alt={t("header.logo", "会社ロゴ")}
             className="h-12" // 高さを調整
           />
@@ -41,8 +41,7 @@ const Header: React.FC = () => {
               href="#message"
               className="text-white hover:text-gray-300 font-medium transition-colors duration-300"
             >
-              {/* nav.message というキーを使う（header と nav のキーを分ける方針） */}
-              {t("nav.message", "代表メッセージ")}
+              {t("header.message", "代表メッセージ")}
             </a>
             <a
               href="#contact"

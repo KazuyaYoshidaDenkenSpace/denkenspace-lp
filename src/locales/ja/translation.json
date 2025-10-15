@@ -9,9 +9,10 @@
   },
   "header": {
     "logo": "会社ロゴ",
-    "logoImg": "/img/logo.png",
+    "logoImg": "/img/common/logo.png",
     "services": "サービス紹介",
     "about": "会社情報",
+    "message": "代表メッセージ",
     "contact": "お問い合わせ"
   },
   "hero": {
@@ -24,17 +25,17 @@
       {
         "title": "Web制作事業",
         "desc": "PHP・ReactによるWebシステム開発",
-        "img": "/img/programming.png"
+        "img": "/img/hp/programming.png"
       },
       {
         "title": "ランディングページ制作",
         "desc": "高品質で成果に繋がるページを構築",
-        "img": "/img/lp.png"
+        "img": "/img/hp/lp.png"
       },
       {
         "title": "食品・貿易事業",
         "desc": "日本の甘味をオンライン販売",
-        "img": "/img/wagashi.png"
+        "img": "/img/hp/wagashi.png"
       }
     ]
   },
