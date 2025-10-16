@@ -17,10 +17,11 @@ export default function Ukulele() {
       />
 
       {/* ==== ヘッダー ==== */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-[#683D03]/80 border-b border-[#BB3E06]">
+      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-[#683D03]">
         <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
           <a href="/ukulele" className="text-2xl font-bold tracking-widest">
-            デンケン<span className="text-[#f7a8c4]">Ukulele</span>
+            <span className="text-[#CF9602]">デンケン</span>{" "}
+            <span className="text-[#CF9602]">Ukulele</span>
           </a>
           <nav className="hidden md:flex gap-8 text-lg">
             <a href="#top" className="hover:text-[#f7a8c4]">
@@ -89,7 +90,7 @@ export default function Ukulele() {
             デンケン
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500">
-              ウクレレ教室
+              Ukulele
             </span>
           </h1>
           <p className="text-2xl mb-10 font-medium tracking-wide">
@@ -118,16 +119,6 @@ export default function Ukulele() {
               申し込み
             </a>
           </div>
-
-          {/* ↓ スクロール誘導 */}
-          <motion.a
-            href="#about"
-            className="mt-10 inline-block text-[#f7a8c4] text-lg border border-[#f7a8c4] rounded-full px-6 py-3 hover:bg-[#f7a8c4] hover:text-[#4b3a3a] transition-all"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            ↓ Learn More
-          </motion.a>
         </motion.div>
       </section>
 
@@ -279,7 +270,7 @@ export default function Ukulele() {
       </section>
 
       {/* ==== フッター ==== */}
-      <footer className="py-8 bg-[#f7cce0] text-center text-[#4b3a3a]">
+      <footer className="py-8  text-center bg-[#683D03]/80 border-b border-[#BB3E06]">
         <p>© 2025 デンケンスペース</p>
       </footer>
 
