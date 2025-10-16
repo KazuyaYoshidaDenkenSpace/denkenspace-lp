@@ -58,7 +58,7 @@ export default function Ukulele() {
               申し込み
             </a>
             <a
-              href="https://www.instagram.com/denkenspace"
+              href="https://www.instagram.com/denken_ukulele"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-pink-500 text-white font-bold rounded-lg shadow-lg hover:bg-pink-600 transition flex items-center gap-2"
@@ -78,7 +78,13 @@ export default function Ukulele() {
       <section className="py-16 px-6 md:px-20 bg-white">
         <h2 className="text-3xl font-bold mb-6 text-center">教室紹介</h2>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center">
-          デンケンウクレレ教室では、基礎から丁寧にレッスンを行います。楽器が初めての方も安心して参加できます。
+          ウクレレは、誰でもすぐに“音を出して楽しめる”楽器です。
+          <br />
+          デンケンウクレレ教室では、難しい理屈よりも「楽しむこと」からスタート！
+          <br />
+          初心者さんも、久しぶりに音楽に触れたい方も大歓迎です。
+          <br />
+          一緒にウクレレのやさしい音色を奏でましょう♪
         </p>
       </section>
 
@@ -110,8 +116,14 @@ export default function Ukulele() {
               className="w-48 h-48 object-cover rounded-full mx-auto mb-4 shadow-lg"
             />
             <h3 className="text-xl font-semibold">よしだ かずや</h3>
-            <p className="text-gray-700">
-              ウクレレ歴5年、講師歴1年目。楽しく学べるレッスンを提供します。
+            <p className="text-gray-700 leading-relaxed">
+              約10年間、地元・新潟でアコースティックギターによる路上ライブ活動をしてきました。
+              <br />
+              実はもともと“超絶音痴”でしたが、試行錯誤の末に少しずつ音感をつかみ、歌う楽しさを取り戻しました。
+              <br />
+              その後ウクレレに出会い、演奏歴5年。講師としてはまだ駆け出しですが、音楽の楽しさを分かち合える場を作りたいと思っています。
+              <br />
+              音楽未経験の方、大歓迎です！ 一緒に音を楽しみましょう♪
             </p>
           </div>
         </div>
@@ -159,7 +171,7 @@ export default function Ukulele() {
       <footer className="py-8 bg-orange-300 text-center text-gray-800 flex flex-col items-center gap-2">
         <p>© 2025 デンケンスペース</p>
         <a
-          href="https://www.instagram.com/denkenspace"
+          href="https://www.instagram.com/denken_ukulele"
           target="_blank"
           rel="noopener noreferrer"
           className="text-orange-900 font-semibold hover:underline flex items-center gap-2"
