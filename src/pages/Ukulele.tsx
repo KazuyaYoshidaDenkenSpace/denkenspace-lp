@@ -99,12 +99,6 @@ export default function Ukulele() {
           {/* ボタン */}
           <div className="flex justify-center gap-6 mt-6">
             <a
-              href="https://forms.gle/a7JAF9tC2efurPhC8"
-              className="px-8 py-4 bg-pink-300 text-white font-bold rounded-full shadow-md hover:bg-pink-400 transition"
-            >
-              申し込み
-            </a>
-            <a
               href="https://www.instagram.com/denken_ukulele"
               target="_blank"
               rel="noopener noreferrer"
@@ -116,6 +110,12 @@ export default function Ukulele() {
                 className="w-5 h-5"
               />
               Instagram
+            </a>
+            <a
+              href="https://forms.gle/a7JAF9tC2efurPhC8"
+              className="px-8 py-4 bg-pink-300 text-white font-bold rounded-full shadow-md hover:bg-pink-400 transition"
+            >
+              申し込み
             </a>
           </div>
 
@@ -212,15 +212,56 @@ export default function Ukulele() {
       <section id="access" className="py-24 px-6 md:px-20 bg-[#fff0f5]">
         <h2 className="text-4xl font-bold mb-10 text-center">場所</h2>
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
-          <div className="bg-[#fff7fa] border border-[#f7cce0] p-6 rounded-lg shadow-sm">
+          {/* 横浜校 */}
+          <div className="bg-[#fff7fa] border border-[#f7cce0] p-6 rounded-lg shadow-sm text-center">
             <h3 className="font-semibold text-xl mb-2">横浜校</h3>
-            <p>津多家横浜鶴屋町店</p>
-            <p>〒221-0835 神奈川県横浜市神奈川区鶴屋町2丁目16</p>
+            <p>津多家 横浜鶴屋町店</p>
+            <p>神奈川県横浜市神奈川区鶴屋町2-16-2 YT16ビル B1F</p>
+            <div className="flex flex-wrap justify-center gap-4 mt-4">
+              <a
+                href="https://www.instagram.com/tsutaya_yokohama/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-orange-300 text-white rounded-full hover:bg-orange-400 transition"
+              >
+                <img
+                  src="/img/common/instagram.png"
+                  alt="Instagram"
+                  className="w-5 h-5"
+                />
+                Instagram
+              </a>
+            </div>
           </div>
-          <div className="bg-[#fff7fa] border border-[#f7cce0] p-6 rounded-lg shadow-sm">
+
+          {/* 雑色校 */}
+          <div className="bg-[#fff7fa] border border-[#f7cce0] p-6 rounded-lg shadow-sm text-center">
             <h3 className="font-semibold text-xl mb-2">雑色校</h3>
             <p>bar nosta(バーノスタ)</p>
             <p>〒144-0055 東京都大田区仲六郷2丁目11−5</p>
+            <div className="flex flex-wrap justify-center gap-4 mt-4">
+              <a
+                href="https://www.instagram.com/bar_nosta/?hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-orange-300 text-white rounded-full hover:bg-orange-400 transition"
+              >
+                <img
+                  src="/img/common/instagram.png"
+                  alt="Instagram"
+                  className="w-5 h-5"
+                />
+                Instagram
+              </a>
+              <a
+                href="https://www.nosta.tv/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-pink-300 text-white rounded-full hover:bg-pink-400 transition"
+              >
+                ホームページ
+              </a>
+            </div>
           </div>
         </div>
       </section>
