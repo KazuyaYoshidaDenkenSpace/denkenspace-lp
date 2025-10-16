@@ -154,7 +154,7 @@ export default function Ukulele() {
           </div>
           <div className="p-6 bg-[#D8C7A3] border border-[#BB3E06] rounded-lg shadow-md">
             <p className="font-semibold text-lg">
-              11/25(土) 17:30 - 19:30 雑色校
+              11/22(土) 17:30 - 19:30 雑色校
             </p>
           </div>
         </div>
