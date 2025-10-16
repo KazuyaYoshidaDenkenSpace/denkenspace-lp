@@ -32,14 +32,14 @@ export default function Ukulele() {
             <a href="#schedule" className="hover:text-[#f7a8c4]">
               スケジュール
             </a>
-            <a href="#price" className="hover:text-[#f7a8c4]">
-              料金
-            </a>
             <a href="#teacher" className="hover:text-[#f7a8c4]">
               講師
             </a>
             <a href="#access" className="hover:text-[#f7a8c4]">
               場所
+            </a>
+            <a href="#price" className="hover:text-[#f7a8c4]">
+              料金
             </a>
             <a href="#contact" className="hover:text-[#f7a8c4]">
               お問い合わせ
@@ -164,25 +164,6 @@ export default function Ukulele() {
         </div>
       </section>
 
-      {/* ==== 料金 ==== */}
-      <section id="price" className="py-24 px-6 md:px-20 bg-[#fff7fa]">
-        <h2 className="text-4xl font-bold mb-10 text-center">料金</h2>
-        <div className="max-w-3xl mx-auto space-y-6 text-center text-[#6b4f4f]">
-          <div className="p-6 bg-[#fff0f5] border border-[#f7cce0] rounded-lg shadow-md">
-            <p className="font-semibold text-lg">初回レッスン：500円</p>
-          </div>
-          <div className="p-6 bg-[#fff0f5] border border-[#f7cce0] rounded-lg shadow-md">
-            <p className="font-semibold text-lg">2回目以降：2,000円</p>
-          </div>
-          <div className="p-6 bg-[#fff0f5] border border-[#f7cce0] rounded-lg shadow-md">
-            <p className="font-semibold text-lg">
-              ウクレレをお持ちでない方には貸出可能です。
-              申し込みフォームで「ウクレレ貸出希望」を選択してください。
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ==== 講師紹介 ==== */}
       <section
         id="teacher"
@@ -262,6 +243,25 @@ export default function Ukulele() {
                 ホームページ
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==== 料金 ==== */}
+      <section id="price" className="py-24 px-6 md:px-20 bg-[#fff7fa]">
+        <h2 className="text-4xl font-bold mb-10 text-center">料金</h2>
+        <div className="max-w-3xl mx-auto space-y-6 text-center text-[#6b4f4f]">
+          <div className="p-6 bg-[#fff0f5] border border-[#f7cce0] rounded-lg shadow-md">
+            <p className="font-semibold text-lg">初回レッスン：500円</p>
+          </div>
+          <div className="p-6 bg-[#fff0f5] border border-[#f7cce0] rounded-lg shadow-md">
+            <p className="font-semibold text-lg">2回目以降：2,000円</p>
+          </div>
+          <div className="p-6 bg-[#fff0f5] border border-[#f7cce0] rounded-lg shadow-md">
+            <p className="font-semibold text-lg">
+              ウクレレをお持ちでない方には貸出可能です。
+              申し込みフォームで「ウクレレ貸出希望」を選択してください。
+            </p>
           </div>
         </div>
       </section>
