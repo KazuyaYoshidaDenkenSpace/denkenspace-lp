@@ -24,25 +24,29 @@ export default function Ukulele() {
             <span className="text-[#CF9602]">Ukulele</span>
           </a>
           <nav className="hidden md:flex gap-8 text-lg">
-            <a href="#top" className="hover:text-[#f7a8c4]">
+            <a
+              href="https://forms.gle/a7JAF9tC2efurPhC8"
+              target="_blank"
+              className="hover:text-[#CF9602]"
+            >
               申し込み
             </a>
-            <a href="#about" className="hover:text-[#f7a8c4]">
+            <a href="#about" className="hover:text-[#CF9602]">
               教室紹介
             </a>
-            <a href="#schedule" className="hover:text-[#f7a8c4]">
+            <a href="#schedule" className="hover:text-[#CF9602]">
               スケジュール
             </a>
-            <a href="#teacher" className="hover:text-[#f7a8c4]">
+            <a href="#teacher" className="hover:text-[#CF9602]">
               講師
             </a>
-            <a href="#access" className="hover:text-[#f7a8c4]">
+            <a href="#access" className="hover:text-[#CF9602]">
               場所
             </a>
-            <a href="#price" className="hover:text-[#f7a8c4]">
+            <a href="#price" className="hover:text-[#CF9602]">
               料金
             </a>
-            <a href="#contact" className="hover:text-[#f7a8c4]">
+            <a href="#contact" className="hover:text-[#CF9602]">
               お問い合わせ
             </a>
           </nav>
@@ -114,6 +118,7 @@ export default function Ukulele() {
             </a>
             <a
               href="https://forms.gle/a7JAF9tC2efurPhC8"
+              target="_blank"
               className="px-8 py-4 bg-[#CF9602] text-white font-bold rounded-full shadow-md hover:bg-[#B97B00] transition"
             >
               申し込み
