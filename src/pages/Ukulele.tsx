@@ -53,72 +53,81 @@ export default function Ukulele() {
         </div>
       </header>
 
-      {/* ==== ヒーロー ==== */}
-      <section className="relative h-[90vh] flex flex-col items-center justify-center text-center overflow-hidden">
-        {/* 背景 */}
-        <img
-          src="/img/ukulele/ukulele.png"
-          alt="ウクレレ教室背景"
-          className="absolute inset-0 w-full h-full object-cover brightness-75"
-          style={{ filter: "contrast(0.95) saturate(0.9) sepia(0.1)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
+{/* ==== ヒーロー ==== */}
+<section className="relative flex flex-col items-center justify-center text-center overflow-hidden min-h-[90vh] md:h-[90vh]">
 
-        {/* 落ち葉 */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(10)].map((_, i) => (
-            <img
-              key={i}
-              src="/img/ukulele/snowflake.png"
-              alt="紅葉"
-              className="absolute animate-fall-leaf"
-              style={{
-                left: `${Math.random() * 100}%`,
-                width: `${24 + Math.random() * 24}px`,
-                height: `${24 + Math.random() * 24}px`,
-                animationDelay: `${Math.random() * 8}s`,
-                animationDuration: `${8 + Math.random() * 6}s`,
-              }}
-            />
-          ))}
-        </div>
+  {/* 背景（スマホ＝縮小、PC＝カバー） */}
+  <img
+    src="/img/ukulele/ukulele.png"
+    alt="ウクレレ教室背景"
+    className="
+      absolute inset-0 w-full h-full
+      object-contain md:object-cover
+      brightness-75
+    "
+    style={{ filter: "contrast(0.95) saturate(0.9) sepia(0.1)" }}
+  />
 
-        {/* タイトル */}
-        <motion.div
-          className="relative z-10 text-[#fff0f5]"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-        <h1 className="absolute -left-[9999px]">
-          デンケンUkulele
-        </h1>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40"></div>
 
-          {/* ボタン */}
-        <div className="flex justify-center gap-6 mt-65 md:mt-75 relative z-10">
-          <a
-            href="https://www.instagram.com/denken_ukulele"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#B91C1C] text-white font-bold rounded-full shadow-md hover:bg-[#991B1B] transition flex items-center gap-2"
-          >
-            <img
-              src="/img/common/instagram.png"
-              alt="Instagram"
-              className="w-5 h-5"
-            />
-            Instagram
-          </a>
-          <a
-            href="https://forms.gle/a7JAF9tC2efurPhC8"
-            target="_blank"
-            className="px-8 py-4 bg-[#15803D] text-white font-bold rounded-full shadow-md hover:bg-[#166534] transition"
-          >
-            申し込み
-          </a>
-        </div>
-        </motion.div>
-      </section>
+  {/* 落ち葉 */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    {[...Array(10)].map((_, i) => (
+      <img
+        key={i}
+        src="/img/ukulele/snowflake.png"
+        alt="紅葉"
+        className="absolute animate-fall-leaf"
+        style={{
+          left: `${Math.random() * 100}%`,
+          width: `${24 + Math.random() * 24}px`,
+          height: `${24 + Math.random() * 24}px`,
+          animationDelay: `${Math.random() * 8}s`,
+          animationDuration: `${8 + Math.random() * 6}s`,
+        }}
+      />
+    ))}
+  </div>
+
+  {/* コンテンツ */}
+  <motion.div
+    className="relative z-10 text-[#fff0f5]"
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2 }}
+  >
+    <h1 className="absolute -left-[9999px]">デンケンUkulele</h1>
+
+    {/* ボタン */}
+<div className="flex justify-center gap-6 mt-[400px] md:mt-[260px]">
+  <a
+    href="https://www.instagram.com/denken_ukulele"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-8 py-4 bg-[#B91C1C] text-white font-bold rounded-full shadow-md hover:bg-[#991B1B] transition flex items-center gap-2"
+  >
+    <img
+      src="/img/common/instagram.png"
+      alt="Instagram"
+      className="w-5 h-5"
+    />
+    Instagram
+  </a>
+
+  <a
+    href="https://forms.gle/a7JAF9tC2efurPhC8"
+    target="_blank"
+    className="px-8 py-4 bg-[#15803D] text-white font-bold rounded-full shadow-md hover:bg-[#166534] transition"
+  >
+    申し込み
+  </a>
+</div>
+
+  </motion.div>
+
+</section>
+
+
 
       {/* ==== 教室紹介 ==== */}
       <section id="about" className="py-24 px-6 md:px-20 bg-[#334155]">
