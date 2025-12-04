@@ -90,40 +90,33 @@ export default function Ukulele() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
-          <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-6 drop-shadow-[0_2px_4px_rgba(255,200,100,0.4)]">
-            デンケン
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-amber-500">
-              Ukulele
-            </span>
-          </h1>
-          <p className="text-2xl mb-10 font-medium tracking-wide">
-            もうすぐクリスマス！ぴったりの歌をおぼえよう！
-          </p>
+        <h1 className="absolute -left-[9999px]">
+          デンケンUkulele
+        </h1>
 
           {/* ボタン */}
-          <div className="flex justify-center gap-6 mt-6">
-            <a
-              href="https://www.instagram.com/denken_ukulele"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#B91C1C] text-white font-bold rounded-full shadow-md hover:bg-[#991B1B] transition flex items-center gap-2"
-            >
-              <img
-                src="/img/common/instagram.png"
-                alt="Instagram"
-                className="w-5 h-5"
-              />
-              Instagram
-            </a>
-            <a
-              href="https://forms.gle/a7JAF9tC2efurPhC8"
-              target="_blank"
-              className="px-8 py-4 bg-[#15803D] text-white font-bold rounded-full shadow-md hover:bg-[#166534] transition"
-            >
-              申し込み
-            </a>
-          </div>
+        <div className="flex justify-center gap-6 mt-65 md:mt-75 relative z-10">
+          <a
+            href="https://www.instagram.com/denken_ukulele"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-[#B91C1C] text-white font-bold rounded-full shadow-md hover:bg-[#991B1B] transition flex items-center gap-2"
+          >
+            <img
+              src="/img/common/instagram.png"
+              alt="Instagram"
+              className="w-5 h-5"
+            />
+            Instagram
+          </a>
+          <a
+            href="https://forms.gle/a7JAF9tC2efurPhC8"
+            target="_blank"
+            className="px-8 py-4 bg-[#15803D] text-white font-bold rounded-full shadow-md hover:bg-[#166534] transition"
+          >
+            申し込み
+          </a>
+        </div>
         </motion.div>
       </section>
 
