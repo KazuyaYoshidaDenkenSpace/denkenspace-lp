@@ -20,11 +20,11 @@ export default function Ukulele() {
         rel="stylesheet"
       />
       {/* ==== ヘッダー ==== */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#1E415A]/30 border-none outline-none">
-        <div className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#1E415A]/20 backdrop-blur-md border-none">
+        <div className="max-w-6xl mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
           <a
             href="/ukulele"
-            className="text-2xl font-bold tracking-widest text-white"
+            className="text-xl md:text-2xl font-bold tracking-widest text-white"
           >
             <span className="hover:text-[#D94333] transition-colors">
               デンケン
@@ -61,70 +61,87 @@ export default function Ukulele() {
           </nav>
         </div>
       </header>
-      {/* ==== ヒーロー ==== */}
-      <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-        <div
-          className="relative aspect-[16/9] bg-center bg-cover overflow-hidden"
-          style={{
-            backgroundImage: "url('/img/ukulele/ukulele.png')",
-          }}
-        >
-          {/* 【重要】上部の隙間感を消すためのグラデーション */}
-          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#1E415A]/80 via-[#1E415A]/20 to-transparent z-0" />
+      {/* ==== ヒーロー & スマホ用ボタンエリア ==== */}
+      <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#1E415A]">
+        {/* --- 画像エリア --- */}
+        {/* スマホは縦長(aspect-[4/5])、PCは横長(md:aspect-[16/9]) */}
+        <div className="relative w-full aspect-[4/5] md:aspect-[16/9] overflow-hidden">
+          {/* 【スマホ用画像】 md（PCサイズ）以上では消す */}
+          <img
+            src="/img/ukulele/ukulele_smt.png"
+            alt=""
+            className="block md:hidden w-full h-full object-cover"
+          />
 
-          {/* 下部グラデーション */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#D6E6F2]" />
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            {[...Array(10)].map((_, i) => (
-              <img
-                key={i}
-                src="/img/ukulele/snowflake.png"
-                alt=""
-                className="absolute animate-fall-leaf"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  width: `${24 + Math.random() * 24}px`,
-                  height: `${24 + Math.random() * 24}px`,
-                  animationDelay: `${Math.random() * 8}s`,
-                  animationDuration: `${8 + Math.random() * 6}s`,
-                }}
-              />
-            ))}
-          </div>
+          {/* 【PC用画像】 md（PCサイズ）未満では消す */}
+          <img
+            src="/img/ukulele/ukulele_pc.png"
+            alt=""
+            className="hidden md:block w-full h-full object-cover"
+          />
 
+          {/* 上部グラデーション：ヘッダーの文字を読みやすくする */}
+          <div className="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#1E415A]/60 to-transparent z-10" />
+
+          {/* 下部グラデーション：画像とボタンエリアを馴染ませる */}
+          <div className="absolute inset-x-0 bottom-0 h-8 md:h-24 bg-gradient-to-t from-[#D6E6F2] to-transparent z-10" />
+
+          {/* PC版のみ：画像の中にボタンを表示 */}
           <motion.div
-            className="absolute inset-x-0 bottom-8 md:bottom-16 z-10 flex justify-center"
-            initial={{ opacity: 0, y: 40 }}
+            className="hidden md:flex absolute inset-x-0 bottom-12 z-20 justify-center px-4"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
           >
-            <h1 className="sr-only">デンケンUkulele</h1>
-            <div className="flex justify-center gap-4 md:gap-8">
+            <div className="flex gap-8 w-full max-w-xl">
               <a
                 href="https://www.instagram.com/denken_ukulele"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 md:px-8 md:py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg hover:bg-[#b53428] transition flex items-center gap-2 text-sm md:text-base"
+                className="flex-1 py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 hover:scale-105 transition"
               >
                 <img
                   src="/img/common/instagram.png"
-                  alt="Instagram"
-                  className="w-4 h-4 md:w-5 md:h-5 invert"
+                  alt=""
+                  className="w-5 h-5 invert"
                 />
                 Instagram
               </a>
               <a
                 href="https://forms.gle/a7JAF9tC2efurPhC8"
                 target="_blank"
-                className="px-6 py-3 md:px-8 md:py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg hover:bg-[#8d6945] transition text-sm md:text-base"
+                className="flex-1 py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg text-center hover:scale-105 transition"
               >
                 申し込み
               </a>
             </div>
           </motion.div>
         </div>
-      </section>
 
+        {/* --- スマホ版のみ：画像の下にボタンを出すエリア --- */}
+        <div className="md:hidden bg-[#D6E6F2] flex flex-col items-center gap-4 px-6 pb-12 pt-6">
+          <a
+            href="https://www.instagram.com/denken_ukulele"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 active:scale-95 transition"
+          >
+            <img
+              src="/img/common/instagram.png"
+              alt=""
+              className="w-5 h-5 invert"
+            />
+            Instagramを見る
+          </a>
+          <a
+            href="https://forms.gle/a7JAF9tC2efurPhC8"
+            target="_blank"
+            className="w-full py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg text-center active:scale-95 transition"
+          >
+            体験レッスンに申し込む
+          </a>
+        </div>
+      </section>
       {/* ==== 教室紹介 ==== */}
       <section
         id="about"
