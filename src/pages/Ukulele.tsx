@@ -61,32 +61,28 @@ export default function Ukulele() {
           </nav>
         </div>
       </header>
-      {/* ==== ヒーロー & スマホ用ボタンエリア ==== */}
-      <section className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-[#1E415A]">
-        {/* --- 画像エリア --- */}
-        {/* スマホは縦長(aspect-[4/5])、PCは横長(md:aspect-[16/9]) */}
-        <div className="relative w-full aspect-[4/5] md:aspect-[16/9] overflow-hidden">
-          {/* 【スマホ用画像】 md（PCサイズ）以上では消す */}
+      {/* ==== ヒーロー & スマホ用ボタンエリア (w-screenを完全に排除) ==== */}
+      <section className="relative w-screen overflow-x-hidden bg-[#1E415A]">
+        <div className="relative w-screen aspect-[4/5] md:aspect-[16/9] overflow-hidden">
+          {/* 【スマホ用画像 */}
           <img
             src="/img/ukulele/ukulele_smt.png"
             alt=""
-            className="block md:hidden w-full h-full object-cover"
+            className="absolute inset-0 h-full min-w-full object-cover object-[46%_top]"
           />
 
-          {/* 【PC用画像】 md（PCサイズ）未満では消す */}
+          {/* 【PC用画像】 */}
           <img
             src="/img/ukulele/ukulele_pc.png"
             alt=""
-            className="hidden md:block w-full h-full object-cover"
+            className="hidden md:block absolute inset-0 w-full h-full object-cover"
           />
 
-          {/* 上部グラデーション：ヘッダーの文字を読みやすくする */}
+          {/* グラデーション (z-10) */}
           <div className="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#1E415A]/60 to-transparent z-10" />
-
-          {/* 下部グラデーション：画像とボタンエリアを馴染ませる */}
           <div className="absolute inset-x-0 bottom-0 h-8 md:h-24 bg-gradient-to-t from-[#D6E6F2] to-transparent z-10" />
 
-          {/* PC版のみ：画像の中にボタンを表示 */}
+          {/* PC版ボタン (z-20) */}
           <motion.div
             className="hidden md:flex absolute inset-x-0 bottom-12 z-20 justify-center px-4"
             initial={{ opacity: 0, y: 20 }}
@@ -97,14 +93,13 @@ export default function Ukulele() {
               <a
                 href="https://www.instagram.com/denken_ukulele"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="flex-1 py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 hover:scale-105 transition"
               >
                 <img
                   src="/img/common/instagram.png"
                   alt=""
                   className="w-5 h-5 invert"
-                />
+                />{" "}
                 Instagram
               </a>
               <a
@@ -118,25 +113,24 @@ export default function Ukulele() {
           </motion.div>
         </div>
 
-        {/* --- スマホ版のみ：画像の下にボタンを出すエリア --- */}
-        <div className="md:hidden bg-[#D6E6F2] flex flex-col items-center gap-4 px-6 pb-12 pt-6">
+        {/* --- スマホ版ボタンエリア --- */}
+        <div className="md:hidden w-full bg-[#D6E6F2] flex flex-col items-center gap-4 px-6 pb-12 pt-6">
           <a
             href="https://www.instagram.com/denken_ukulele"
             target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 active:scale-95 transition"
+            className="w-full py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 active:scale-95"
           >
             <img
               src="/img/common/instagram.png"
               alt=""
               className="w-5 h-5 invert"
-            />
+            />{" "}
             Instagramを見る
           </a>
           <a
             href="https://forms.gle/a7JAF9tC2efurPhC8"
             target="_blank"
-            className="w-full py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg text-center active:scale-95 transition"
+            className="w-full py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg text-center active:scale-95"
           >
             体験レッスンに申し込む
           </a>
