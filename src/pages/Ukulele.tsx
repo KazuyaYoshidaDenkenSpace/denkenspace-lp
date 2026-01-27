@@ -161,7 +161,7 @@ export default function Ukulele() {
       {/* ==== スケジュール ==== */}
       <section
         id="schedule"
-        className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-[#1E415A]"
+        className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-[#1E415A] w-full max-w-full overflow-hidden"
       >
         <h2 className="text-4xl font-bold mb-16 text-center tracking-widest uppercase text-[#1E415A]">
           Schedule
@@ -169,7 +169,7 @@ export default function Ukulele() {
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
           {/* 横浜校スケジュール */}
-          <div className="p-10 bg-[#1E415A]/60 backdrop-blur-xl border border-white/30 rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[300px]">
+          <div className="p-10 bg-[#1E415A]/60 backdrop-blur-xl border border-white/30 rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[350px]">
             <p className="text-[#D9A036] font-extrabold text-sm mb-6 uppercase tracking-[0.2em] drop-shadow-sm">
               横浜校 津多家 横浜鶴屋町店
             </p>
@@ -178,7 +178,7 @@ export default function Ukulele() {
                 NEXT LESSON
               </p>
               <p className="font-bold text-6xl text-white drop-shadow-md">
-                01.25
+                02.22
                 <span className="text-[#D94333] ml-2 text-3xl italic font-black">
                   sun
                 </span>
@@ -189,21 +189,41 @@ export default function Ukulele() {
             </p>
           </div>
 
-          {/* 大田区校スケジュール (日程調整中) */}
-          <div className="p-10 bg-[#1E415A]/40 backdrop-blur-lg border border-white/10 rounded-[2.5rem] shadow-xl text-center flex flex-col justify-center min-h-[300px]">
-            <p className="text-white/50 font-bold text-sm mb-6 uppercase tracking-[0.2em]">
+          {/* 大田区校スケジュール (時間修正 & ランチ情報追加) */}
+          <div className="p-10 bg-[#1E415A]/70 backdrop-blur-xl border border-white/30 rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[350px] relative overflow-hidden">
+            {/* ランチのタグを右上に配置 */}
+            <div className="absolute top-5 right-5 bg-[#D9A036] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">
+              LUNCH SET
+            </div>
+
+            <p className="text-[#D9A036] font-extrabold text-sm mb-6 uppercase tracking-[0.2em] drop-shadow-sm">
               大田区校 ビストロ クープー
             </p>
             <div className="mb-4">
-              <p className="font-bold text-3xl text-white/90 tracking-tight drop-shadow-sm">
-                日程調整中
+              <p className="text-[#F1F8E9] text-xs font-bold mb-2 italic tracking-widest opacity-90">
+                NEXT LESSON
+              </p>
+              <p className="font-bold text-6xl text-white drop-shadow-md">
+                02.15
+                <span className="text-[#D94333] ml-2 text-3xl italic font-black">
+                  sun
+                </span>
               </p>
             </div>
-            <p className="text-lg text-white/60 leading-relaxed font-medium">
-              開催が決まり次第、
-              <br className="md:hidden" />
-              こちらでお知らせいたします
+            <p className="text-2xl text-[#F1F8E9] font-bold drop-shadow-sm mb-4">
+              11:00 - 12:30
             </p>
+
+            {/* ランチ案内 */}
+            <div className="mt-4 pt-4 border-t border-white/20">
+              <p className="text-white text-sm font-medium leading-relaxed">
+                <span className="text-[#D9A036] font-bold">12:30 〜 </span>
+                美味しいビストロランチ
+              </p>
+              <p className="text-white/60 text-xs mt-1">
+                ※ランチ代 2,000円が別途必要です
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -224,7 +244,7 @@ export default function Ukulele() {
           </div>
           <div className="max-w-lg">
             <h3 className="text-2xl font-bold mb-4 border-l-4 border-[#A67C52] pl-4">
-              よしだ かずや
+              吉田 カズヤ
             </h3>
             <p className="leading-relaxed text-[#1E415A]/80 font-medium">
               約10年間、地元・新潟でアコースティックギターによる路上ライブ活動をしてきました。
