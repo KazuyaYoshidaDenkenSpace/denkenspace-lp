@@ -33,9 +33,11 @@
         "img": "/img/hp/lp.png"
       },
       {
-        "title": "食品・貿易事業",
-        "desc": "日本の甘味をオンライン販売",
-        "img": "/img/hp/wagashi.png"
+        "title": "ウクレレ講師",
+        "desc": "初心者向けウクレレ教室 - やさしい音色を一緒に奏でましょう",
+        "img": "/img/hp/ukulele.png",
+        "url": "/ukulele",
+        "urlLabel": "ウクレレ教室ホームページ"
       }
     ]
   },

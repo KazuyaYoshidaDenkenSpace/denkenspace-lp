@@ -17,8 +17,7 @@ const Contact: React.FC = () => {
   return (
     <section className="w-full max-w-6xl px-6 py-12 flex flex-col items-center">
       <button
-        className="px-6 py-4 bg-[#2B6CB0] text-white font-bold rounded 
-             hover:bg-[#234E89] transition"
+        className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 text-lg"
         onClick={() => setIsOpen(!isOpen)}
       >
         {t("contact.title", "お問い合わせ")}

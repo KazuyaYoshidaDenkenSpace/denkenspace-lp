@@ -8,7 +8,7 @@ export default function Ukulele() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#2B5876] text-[#F1F8E9] relative overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#EAF7F0] text-[#1F3F36] relative overflow-x-hidden">
       <SeoHead
         title="デンケンウクレレ教室"
         description="初心者向けウクレレ教室の案内ページです。レッスン内容やスケジュールを掲載しています。"
@@ -20,41 +20,41 @@ export default function Ukulele() {
         rel="stylesheet"
       />
       {/* ==== ヘッダー ==== */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-[#1E415A]/20 backdrop-blur-md border-none">
+      <header className="fixed top-0 left-0 w-full z-50 bg-[#D9F0E8]/70 backdrop-blur-md border-none">
         <div className="max-w-6xl mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
           <a
             href="/ukulele"
-            className="text-xl md:text-2xl font-bold tracking-widest text-white"
+            className="text-xl md:text-2xl font-bold tracking-widest text-[#1F3F36]"
           >
-            <span className="hover:text-[#D94333] transition-colors">
+            <span className="hover:text-[#F08BA4] transition-colors">
               デンケン
             </span>{" "}
-            <span className="hover:text-[#D94333] transition-colors">
+            <span className="hover:text-[#F08BA4] transition-colors">
               Ukulele
             </span>
           </a>
-          <nav className="hidden md:flex gap-8 text-lg font-medium text-white/90">
-            <a href="#about" className="hover:text-[#D9A036] transition-colors">
+          <nav className="hidden md:flex gap-8 text-lg font-medium text-[#1F3F36]/90">
+            <a href="#about" className="hover:text-[#F08BA4] transition-colors">
               教室紹介
             </a>
             <a
               href="#schedule"
-              className="hover:text-[#D9A036] transition-colors"
+              className="hover:text-[#F08BA4] transition-colors"
             >
               スケジュール
             </a>
             <a
               href="#access"
-              className="hover:text-[#D9A036] transition-colors"
+              className="hover:text-[#F08BA4] transition-colors"
             >
               場所
             </a>
-            <a href="#price" className="hover:text-[#D9A036] transition-colors">
+            <a href="#price" className="hover:text-[#F08BA4] transition-colors">
               料金
             </a>
             <a
               href="#contact"
-              className="hover:text-[#D9A036] transition-colors"
+              className="hover:text-[#F08BA4] transition-colors"
             >
               お問い合わせ
             </a>
@@ -62,7 +62,7 @@ export default function Ukulele() {
         </div>
       </header>
       {/* ==== ヒーロー & スマホ用ボタンエリア (w-screenを完全に排除) ==== */}
-      <section className="relative w-screen overflow-x-hidden bg-[#1E415A]">
+      <section className="relative w-screen overflow-x-hidden bg-[#B7E3D5]">
         <div className="relative w-screen aspect-[4/5] md:aspect-[16/9] overflow-hidden">
           {/* 【スマホ用画像 */}
           <img
@@ -79,8 +79,8 @@ export default function Ukulele() {
           />
 
           {/* グラデーション (z-10) */}
-          <div className="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#1E415A]/60 to-transparent z-10" />
-          <div className="absolute inset-x-0 bottom-0 h-8 md:h-24 bg-gradient-to-t from-[#D6E6F2] to-transparent z-10" />
+          <div className="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#B7E3D5]/70 to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-8 md:h-24 bg-gradient-to-t from-[#F7E6EB] to-transparent z-10" />
 
           {/* PC版ボタン (z-20) */}
           <motion.div
@@ -93,7 +93,7 @@ export default function Ukulele() {
               <a
                 href="https://www.instagram.com/denken_ukulele"
                 target="_blank"
-                className="flex-1 py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 hover:scale-105 transition"
+                className="flex-1 py-4 bg-[#F08BA4] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 hover:scale-105 transition"
               >
                 <img
                   src="/img/common/instagram.png"
@@ -105,7 +105,7 @@ export default function Ukulele() {
               <a
                 href="https://forms.gle/a7JAF9tC2efurPhC8"
                 target="_blank"
-                className="flex-1 py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg text-center hover:scale-105 transition"
+                className="flex-1 py-4 bg-[#A7D8BC] text-white font-bold rounded-full shadow-lg text-center hover:scale-105 transition"
               >
                 申し込み
               </a>
@@ -114,11 +114,11 @@ export default function Ukulele() {
         </div>
 
         {/* --- スマホ版ボタンエリア --- */}
-        <div className="md:hidden w-full bg-[#D6E6F2] flex flex-col items-center gap-4 px-6 pb-12 pt-6">
+        <div className="md:hidden w-full bg-[#F6E9EC] flex flex-col items-center gap-4 px-6 pb-12 pt-6">
           <a
             href="https://www.instagram.com/denken_ukulele"
             target="_blank"
-            className="w-full py-4 bg-[#D94333] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 active:scale-95"
+            className="w-full py-4 bg-[#F08BA4] text-white font-bold rounded-full shadow-lg text-center flex items-center justify-center gap-2 active:scale-95"
           >
             <img
               src="/img/common/instagram.png"
@@ -130,7 +130,7 @@ export default function Ukulele() {
           <a
             href="https://forms.gle/a7JAF9tC2efurPhC8"
             target="_blank"
-            className="w-full py-4 bg-[#A67C52] text-white font-bold rounded-full shadow-lg text-center active:scale-95"
+            className="w-full py-4 bg-[#A7D8BC] text-white font-bold rounded-full shadow-lg text-center active:scale-95"
           >
             体験レッスンに申し込む
           </a>
@@ -139,12 +139,12 @@ export default function Ukulele() {
       {/* ==== 教室紹介 ==== */}
       <section
         id="about"
-        className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#D6E6F2] to-white text-[#1E415A]"
+        className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#F7E6EB] to-white text-[#1F3F36]"
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-10 tracking-widest relative inline-block">
             教室紹介
-            <span className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-12 h-1 bg-[#A67C52]"></span>
+            <span className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-12 h-1 bg-[#A7D8BC]"></span>
           </h2>
           <p className="text-lg leading-relaxed font-medium">
             ウクレレは、誰でもすぐに“音を出して楽しめる”楽器です。
@@ -161,66 +161,66 @@ export default function Ukulele() {
       {/* ==== スケジュール ==== */}
       <section
         id="schedule"
-        className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-[#1E415A] w-full max-w-full overflow-hidden"
+        className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-[#D9F0E8] w-full max-w-full overflow-hidden"
       >
-        <h2 className="text-4xl font-bold mb-16 text-center tracking-widest uppercase text-[#1E415A]">
+        <h2 className="text-4xl font-bold mb-16 text-center tracking-widest uppercase text-[#1F3F36]">
           Schedule
         </h2>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
           {/* 横浜校スケジュール */}
-          <div className="p-10 bg-[#1E415A]/60 backdrop-blur-xl border border-white/30 rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[350px]">
-            <p className="text-[#D9A036] font-extrabold text-sm mb-6 uppercase tracking-[0.2em] drop-shadow-sm">
+          <div className="p-10 bg-white/90 border border-[#CDE8DA] rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[350px]">
+            <p className="text-[#A7D8BC] font-extrabold text-sm mb-6 uppercase tracking-[0.2em] drop-shadow-sm">
               横浜校 津多家 横浜鶴屋町店
             </p>
             <div className="mb-6">
-              <p className="text-[#F1F8E9] text-xs font-bold mb-2 italic tracking-widest opacity-90">
+              <p className="text-[#1F3F36] text-xs font-bold mb-2 italic tracking-widest opacity-90">
                 NEXT LESSON
               </p>
-              <p className="font-bold text-6xl text-white drop-shadow-md">
+              <p className="font-bold text-6xl text-[#1F3F36] drop-shadow-md">
                 05.10
-                <span className="text-[#D94333] ml-2 text-3xl italic font-black">
+                <span className="text-[#F08BA4] ml-2 text-3xl italic font-black">
                   sun
                 </span>
               </p>
             </div>
-            <p className="text-2xl text-[#F1F8E9] font-bold drop-shadow-sm">
+            <p className="text-2xl text-[#1F3F36] font-bold drop-shadow-sm">
               13:30 - 15:00
             </p>
           </div>
 
           {/* 大田区校スケジュール (時間修正 & ランチ情報追加) */}
-          <div className="p-10 bg-[#1E415A]/70 backdrop-blur-xl border border-white/30 rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[350px] relative overflow-hidden">
+          <div className="p-10 bg-white/90 border border-[#CDE8DA] rounded-[2.5rem] shadow-2xl text-center flex flex-col justify-center min-h-[350px] relative overflow-hidden">
             {/* ランチのタグを右上に配置 */}
-            <div className="absolute top-5 right-5 bg-[#D9A036] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">
+            <div className="absolute top-5 right-5 bg-[#F08BA4] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">
               LUNCH SET
             </div>
 
-            <p className="text-[#D9A036] font-extrabold text-sm mb-6 uppercase tracking-[0.2em] drop-shadow-sm">
+            <p className="text-[#A7D8BC] font-extrabold text-sm mb-6 uppercase tracking-[0.2em] drop-shadow-sm">
               大田区校 ビストロ クープー
             </p>
             <div className="mb-4">
-              <p className="text-[#F1F8E9] text-xs font-bold mb-2 italic tracking-widest opacity-90">
+              <p className="text-[#1F3F36] text-xs font-bold mb-2 italic tracking-widest opacity-90">
                 NEXT LESSON
               </p>
-              <p className="font-bold text-6xl text-white drop-shadow-md">
+              <p className="font-bold text-6xl text-[#1F3F36] drop-shadow-md">
                 05.17
-                <span className="text-[#D94333] ml-2 text-3xl italic font-black">
+                <span className="text-[#F08BA4] ml-2 text-3xl italic font-black">
                   sun
                 </span>
               </p>
             </div>
-            <p className="text-2xl text-[#F1F8E9] font-bold drop-shadow-sm mb-4">
+            <p className="text-2xl text-[#1F3F36] font-bold drop-shadow-sm mb-4">
               11:00 - 12:30
             </p>
 
             {/* ランチ案内 */}
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <p className="text-white text-sm font-medium leading-relaxed">
-                <span className="text-[#D9A036] font-bold">12:30 〜 </span>
+            <div className="mt-4 pt-4 border-t border-[#CDE8DA]">
+              <p className="text-[#1F3F36] text-sm font-medium leading-relaxed">
+                <span className="text-[#A7D8BC] font-bold">12:30 〜 </span>
                 美味しいビストロランチ
               </p>
-              <p className="text-white/60 text-xs mt-1">
+              <p className="text-[#1F3F36]/60 text-xs mt-1">
                 ※ランチ代 2,000円が別途必要です
               </p>
             </div>
@@ -231,11 +231,11 @@ export default function Ukulele() {
       {/* ==== 講師紹介 ==== */}
       <section
         id="teacher"
-        className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#1E415A] to-[#D6E6F2] text-[#1E415A]"
+        className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#B7E3D5] to-[#F7F3F2] text-[#1F3F36]"
       >
         <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-sm p-10 rounded-[2.5rem] shadow-xl flex flex-col md:flex-row justify-center items-center gap-10">
           <div className="relative">
-            <div className="absolute inset-0 border-4 border-[#A67C52] rounded-full scale-105 opacity-50"></div>
+            <div className="absolute inset-0 border-4 border-[#A7D8BC] rounded-full scale-105 opacity-50"></div>
             <img
               src="/img/ukulele/ukulele_man.png"
               alt="講師"
@@ -243,10 +243,10 @@ export default function Ukulele() {
             />
           </div>
           <div className="max-w-lg">
-            <h3 className="text-2xl font-bold mb-4 border-l-4 border-[#A67C52] pl-4">
+            <h3 className="text-2xl font-bold mb-4 border-l-4 border-[#A7D8BC] pl-4">
               吉田 カズヤ
             </h3>
-            <p className="leading-relaxed text-[#1E415A]/80 font-medium">
+            <p className="leading-relaxed text-[#1F3F36]/80 font-medium">
               約10年間、地元・新潟でアコースティックギターによる路上ライブ活動をしてきました。
               音楽を通じて楽しさを広めたいと思い、ウクレレに出会いました。
             </p>
@@ -257,24 +257,24 @@ export default function Ukulele() {
       {/* ==== 場所 ==== */}
       <section
         id="access"
-        className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#D6E6F2] to-white text-[#1E415A]"
+        className="py-24 px-6 md:px-20 bg-gradient-to-b from-[#F7E6EB] to-white text-[#1F3F36]"
       >
-        <h2 className="text-4xl font-bold mb-16 text-center tracking-widest uppercase text-[#1E415A]">
+        <h2 className="text-4xl font-bold mb-16 text-center tracking-widest uppercase text-[#1F3F36]">
           Access
         </h2>
 
         {/* 横並びにするための設定: grid-cols-1 (スマホ) / lg:grid-cols-2 (PC) */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* 横浜校 */}
-          <div className="p-8 bg-white border-2 border-[#D6E6F2] rounded-[2.5rem] shadow-sm flex flex-col h-full">
+          <div className="p-8 bg-white border-2 border-[#CDE8DA] rounded-[2.5rem] shadow-sm flex flex-col h-full">
             <div className="flex-grow">
-              <div className="inline-block px-4 py-1 bg-[#D94333] text-white text-sm font-bold rounded-md mb-4">
+              <div className="inline-block px-4 py-1 bg-[#F08BA4] text-white text-sm font-bold rounded-md mb-4">
                 横浜校
               </div>
-              <h3 className="font-bold text-2xl mb-3 text-[#1E415A]">
+              <h3 className="font-bold text-2xl mb-3 text-[#1F3F36]">
                 津多家 横浜鶴屋町店
               </h3>
-              <p className="text-[#1E415A]/70 leading-relaxed font-medium mb-6">
+              <p className="text-[#1F3F36]/70 leading-relaxed font-medium mb-6">
                 神奈川県横浜市神奈川区鶴屋町2-16-2
                 <br />
                 YT16ビル B1F
@@ -283,7 +283,7 @@ export default function Ukulele() {
                 href="https://www.instagram.com/tsutaya_yokohama/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#A67C52] text-white rounded-xl hover:bg-[#8d6945] transition-all font-bold text-sm mb-8"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#A7D8BC] text-[#1F3F36] rounded-xl hover:bg-[#84B99F] transition-all font-bold text-sm mb-8"
               >
                 <img
                   src="/img/common/instagram.png"
@@ -294,7 +294,7 @@ export default function Ukulele() {
               </a>
             </div>
             {/* 横浜地図: 正しい埋め込みURLに修正済 */}
-            <div className="w-full h-72 rounded-2xl overflow-hidden border border-[#D6E6F2]">
+            <div className="w-full h-72 rounded-2xl overflow-hidden border border-[#CDE8DA]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.444908022718!2d139.62067757623663!3d35.46853604163939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c139703b603%3A0x6ec0c5ec796a5828!2z5rSl5aSa5a62IOaoquW some5ba75bGL55S65bqX!5e0!3m2!1sja!2sjp!4v1700000000000"
                 width="100%"
@@ -309,15 +309,15 @@ export default function Ukulele() {
           </div>
 
           {/* 大田区校 */}
-          <div className="p-8 bg-white border-2 border-[#D6E6F2] rounded-[2.5rem] shadow-sm flex flex-col h-full">
+          <div className="p-8 bg-white border-2 border-[#CDE8DA] rounded-[2.5rem] shadow-sm flex flex-col h-full">
             <div className="flex-grow">
-              <div className="inline-block px-4 py-1 bg-[#D94333] text-white text-sm font-bold rounded-md mb-4">
+              <div className="inline-block px-4 py-1 bg-[#F08BA4] text-white text-sm font-bold rounded-md mb-4">
                 大田区校
               </div>
-              <h3 className="font-bold text-2xl mb-3 text-[#1E415A]">
+              <h3 className="font-bold text-2xl mb-3 text-[#1F3F36]">
                 ビストロ クープー
               </h3>
-              <p className="text-[#1E415A]/70 leading-relaxed font-medium mb-6">
+              <p className="text-[#1F3F36]/70 leading-relaxed font-medium mb-6">
                 東京都大田区仲六郷2-20-10
                 <br />
                 (雑色駅から徒歩3分)
@@ -326,7 +326,7 @@ export default function Ukulele() {
                 href="https://www.instagram.com/bistro_cou_cou/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#A67C52] text-white rounded-xl hover:bg-[#8d6945] transition-all font-bold text-sm mb-8"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#A7D8BC] text-[#1F3F36] rounded-xl hover:bg-[#84B99F] transition-all font-bold text-sm mb-8"
               >
                 <img
                   src="/img/common/instagram.png"
@@ -337,7 +337,7 @@ export default function Ukulele() {
               </a>
             </div>
             {/* 大田区地図: 正しい埋め込みURLに修正済 */}
-            <div className="w-full h-72 rounded-2xl overflow-hidden border border-[#D6E6F2]">
+            <div className="w-full h-72 rounded-2xl overflow-hidden border border-[#CDE8DA]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.286377317789!2d139.71158567624147!3d35.549114237149025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018608882585913%3A0xe781907572714a5b!2z44OT44K544OI44OtIOOCr-ODvOODvOODvA!5e0!3m2!1sja!2sjp!4v1700000000000"
                 width="100%"
@@ -356,21 +356,21 @@ export default function Ukulele() {
       {/* ==== 料金 ==== */}
       <section
         id="price"
-        className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-[#D6E6F2] text-[#1E415A]"
+        className="py-24 px-6 md:px-20 bg-gradient-to-b from-white to-[#F7E6EB] text-[#1F3F36]"
       >
         <h2 className="text-4xl font-bold mb-12 text-center tracking-widest">
           料金
         </h2>
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-center">
-          <div className="p-10 bg-white rounded-3xl shadow-xl border-b-8 border-[#D9A036]">
-            <p className="text-[#D9A036] font-bold text-sm mb-2 uppercase">
+          <div className="p-10 bg-white rounded-3xl shadow-xl border-b-8 border-[#A7D8BC]">
+            <p className="text-[#A7D8BC] font-bold text-sm mb-2 uppercase">
               Trial
             </p>
             <p className="text-2xl font-bold mb-2">初回レッスン</p>
-            <p className="text-4xl font-black text-[#D94333]">500円</p>
+            <p className="text-4xl font-black text-[#F08BA4]">500円</p>
           </div>
-          <div className="p-10 bg-white rounded-3xl shadow-xl border-b-8 border-[#A67C52]">
-            <p className="text-[#A67C52] font-bold text-sm mb-2 uppercase">
+          <div className="p-10 bg-white rounded-3xl shadow-xl border-b-8 border-[#A7D8BC]">
+            <p className="text-[#A7D8BC] font-bold text-sm mb-2 uppercase">
               Regular
             </p>
             <p className="text-2xl font-bold mb-2">2回目以降</p>
@@ -382,13 +382,13 @@ export default function Ukulele() {
       {/* ==== お問い合わせ (URLを修正) ==== */}
       <section
         id="contact"
-        className="py-28 px-6 md:px-20 bg-gradient-to-b from-[#D6E6F2] to-[#1E415A] text-center"
+        className="py-28 px-6 md:px-20 bg-gradient-to-b from-[#F7E6EB] to-[#B7E3D5] text-center"
       >
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-[#1E415A] tracking-tight">
+          <h2 className="text-4xl font-bold mb-8 text-[#1F3F36] tracking-tight">
             お問い合わせ
           </h2>
-          <p className="text-[#1E415A]/80 mb-12 text-lg font-medium leading-relaxed">
+          <p className="text-[#1F3F36]/80 mb-12 text-lg font-medium leading-relaxed">
             レッスン内容へのご質問や、楽器の相談、見学の希望など、
             <br />
             どんなことでもお気軽にお送りください！
@@ -400,7 +400,7 @@ export default function Ukulele() {
               href="https://forms.gle/a7JAF9tC2efurPhC8"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex flex-col items-center justify-center p-8 bg-[#D94333] text-white rounded-[2rem] shadow-xl hover:scale-105 transition-all"
+              className="flex-1 flex flex-col items-center justify-center p-8 bg-[#F08BA4] text-white rounded-[2rem] shadow-xl hover:scale-105 transition-all"
             >
               <span className="text-sm opacity-80 mb-2 uppercase tracking-widest">
                 Entry
@@ -413,7 +413,7 @@ export default function Ukulele() {
               href="https://forms.gle/jf8uH5WyrrC6v7N47"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex flex-col items-center justify-center p-8 bg-[#A67C52] text-white rounded-[2rem] shadow-xl hover:scale-105 transition-all"
+              className="flex-1 flex flex-col items-center justify-center p-8 bg-[#A7D8BC] text-[#1F3F36] rounded-[2rem] shadow-xl hover:scale-105 transition-all"
             >
               <span className="text-sm opacity-80 mb-2 uppercase tracking-widest">
                 Contact
@@ -422,14 +422,14 @@ export default function Ukulele() {
             </a>
           </div>
 
-          <p className="text-white/40 text-sm">
+          <p className="text-[#1F3F36]/40 text-sm">
             ※通常2〜3日以内に返信させていただきます。
           </p>
         </div>
       </section>
       {/* ==== フッター ==== */}
-      <footer className="py-12 text-center bg-[#0F172A] border-t border-white/10">
-        <p className="text-white/40 text-sm tracking-widest">
+      <footer className="py-12 text-center bg-[#E5F3EE] border-t border-[#CDE8DA]">
+        <p className="text-[#1F3F36]/70 text-sm tracking-widest">
           © 2025 デンケンスペース
         </p>
       </footer>

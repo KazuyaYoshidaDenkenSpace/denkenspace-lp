@@ -8,7 +8,7 @@ const Header: React.FC = () => {
 
   return (
     // ヘッダー全体
-    <header className="fixed top-0 w-full z-50 bg-gradient-to-r from-blue-700 via-blue-900 to-indigo-900 shadow-lg">
+    <header className="fixed top-0 w-full z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-2xl backdrop-blur-sm">
       {/* 横幅を max-w-6xl に制限しつつ中央寄せ。高さ h-20 */}
       <div className="max-w-6xl mx-auto flex items-center justify-between h-20 px-6">
         {/* 左側：ロゴ */}
@@ -56,10 +56,10 @@ const Header: React.FC = () => {
             {/* 日本語ボタン */}
             <button
               onClick={() => i18n.changeLanguage("ja")}
-              className={`px-3 py-1 text-sm rounded transition ${
+              className={`px-3 py-1 text-sm rounded-full transition font-semibold ${
                 i18n.language === "ja"
-                  ? "bg-yellow-400 text-black font-bold" // 選択中は黄色で強調
-                  : "bg-blue-500 text-white hover:bg-blue-600"
+                  ? "bg-cyan-400 text-slate-900 shadow-lg" // 選択中はシアン
+                  : "bg-white/10 text-white hover:bg-white/20 backdrop-blur"
               }`}
             >
               日本語
@@ -68,10 +68,10 @@ const Header: React.FC = () => {
             {/* 英語ボタン */}
             <button
               onClick={() => i18n.changeLanguage("en")}
-              className={`px-3 py-1 text-sm rounded transition ${
+              className={`px-3 py-1 text-sm rounded-full transition font-semibold ${
                 i18n.language === "en"
-                  ? "bg-yellow-400 text-black font-bold" // 選択中は黄色で強調
-                  : "bg-green-500 text-white hover:bg-green-600"
+                  ? "bg-cyan-400 text-slate-900 shadow-lg" // 選択中はシアン
+                  : "bg-white/10 text-white hover:bg-white/20 backdrop-blur"
               }`}
             >
               EN

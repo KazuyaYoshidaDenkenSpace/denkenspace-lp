@@ -13,8 +13,7 @@ const Message: React.FC = () => {
     >
       {/* ボタンを押すと代表メッセージが開閉する */}
       <button
-        className="px-6 py-4 bg-[#2B6CB0] text-white font-bold rounded 
-             hover:bg-[#234E89] transition"
+        className="px-8 py-4 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 text-lg"
         onClick={() => setIsOpen(!isOpen)}
       >
         {t("message.title", "代表メッセージ")}
@@ -28,7 +27,7 @@ const Message: React.FC = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="mt-6 overflow-hidden bg-white p-6 rounded-lg shadow"
+            className="mt-6 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl shadow-2xl border border-white/10"
           >
             <div className="flex flex-col md:flex-row items-center gap-8">
               {/* 写真 */}
@@ -42,15 +41,15 @@ const Message: React.FC = () => {
 
               {/* テキスト */}
               <div className="w-full md:w-2/3 text-left">
-                <h2 className="text-2xl font-bold mb-6">
+                <h2 className="text-2xl font-bold mb-6 text-white">
                   {t("message.title", "代表挨拶")}
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                <p className="text-lg text-slate-200 leading-relaxed whitespace-pre-line">
                   {t("message.body", "ここに代表の言葉が入ります。")}
                 </p>
                 <div className="mt-6 text-right">
-                  <p className="font-semibold">
-                    {t("message.ceo", "代表取締役 吉田 利也")}
+                  <p className="font-semibold text-cyan-300">
+                    {t("message.ceo", "代表取統逸 吉田 利也")}
                   </p>
                 </div>
               </div>

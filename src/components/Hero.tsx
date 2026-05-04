@@ -6,17 +6,23 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-screen h-[600px] overflow-hidden">
-      {/* 背景画像 */}
+    <section className="relative w-screen h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* グラデーション背景 */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20" />
+      {/* テクスチャ背景（オプション） */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-center bg-cover"
+        className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-10"
         style={{ backgroundImage: `url(/img/hp/washi-texture.png)` }}
       />
-      <div className="absolute inset-0 bg-white/40" />
 
       {/* コンテンツ */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-        <motion.h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 drop-shadow-sm">
+        <motion.h1 
+          className="text-6xl md:text-7xl font-black text-white drop-shadow-2xl tracking-tight"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           {t("hero.title")
             .split("\n")
             .map((line, i) => (
@@ -35,10 +41,10 @@ const Hero: React.FC = () => {
         </motion.h1>
 
         <motion.p
-          className="mt-6 text-xl md:text-2xl text-gray-800"
+          className="mt-6 text-xl md:text-2xl text-cyan-200 font-semibold"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 1, delay: 0.4 }}
         >
           {t("hero.subtitle")}
         </motion.p>
