@@ -178,7 +178,7 @@ export default function Ukulele() {
                 NEXT LESSON
               </p>
               <p className="font-bold text-6xl text-white drop-shadow-md">
-                04.19
+                05.10
                 <span className="text-[#D94333] ml-2 text-3xl italic font-black">
                   sun
                 </span>
@@ -204,7 +204,7 @@ export default function Ukulele() {
                 NEXT LESSON
               </p>
               <p className="font-bold text-6xl text-white drop-shadow-md">
-                04.12
+                05.17
                 <span className="text-[#D94333] ml-2 text-3xl italic font-black">
                   sun
                 </span>
