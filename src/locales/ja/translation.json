@@ -60,9 +60,22 @@
     "ceo": "代表取締役 吉田 利也"
   },
   "contact": {
-    "title": "お問い合わせ"
+    "title": "お問い合わせ",
+    "subtitle": "お気軽にご相談ください。通常2営業日以内にご返信いたします。",
+    "name": "お名前",
+    "namePlaceholder": "山田 太郎",
+    "email": "メールアドレス",
+    "emailPlaceholder": "example@email.com",
+    "phone": "電話番号",
+    "phonePlaceholder": "090-1234-5678",
+    "message": "お問い合わせ内容",
+    "messagePlaceholder": "ご相談内容をご記入ください",
+    "submit": "送信する",
+    "submitting": "送信中...",
+    "success": "送信しました。お返事までしばらくお待ちください。",
+    "error": "送信に失敗しました。少し時間を置いて再度お試しください。"
   },
   "footer": {
-    "copy": "© 2025 株式会社デンケンスペース. All rights reserved."
+    "copy": "© 2026 株式会社デンケンスペース. All rights reserved."
   }
 }

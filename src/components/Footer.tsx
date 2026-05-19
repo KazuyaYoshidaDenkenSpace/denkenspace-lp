@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="flex items-center gap-3">
           <img src="/img/common/logo.png" alt="logo" className="h-8" />
           <p className="text-xs text-slate-500">
-            {t("footer.copy", "© 2025 株式会社デンケンスペース. All rights reserved.")}
+            {t("footer.copy", "© 2026 株式会社デンケンスペース. All rights reserved.")}
           </p>
         </div>
 
