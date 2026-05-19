@@ -4,4 +4,4 @@ Allow: /
 # /ukulele は ukulele.denkenspace.com にリダイレクトされる
 Disallow: /ukulele
 
-Sitemap: https://denkenspace.com/sitemap.xml
+Sitemap: https://www.denkenspace.com/sitemap.xml

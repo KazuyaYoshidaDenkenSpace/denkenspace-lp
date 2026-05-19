@@ -2,11 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://denkenspace.com/</loc>
+    <loc>https://www.denkenspace.com/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://denkenspace.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://denkenspace.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.denkenspace.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denkenspace.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denkenspace.com/" />
+  </url>
+  <url>
+    <loc>https://www.denkenspace.com/en/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.denkenspace.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denkenspace.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denkenspace.com/" />
   </url>
 </urlset>

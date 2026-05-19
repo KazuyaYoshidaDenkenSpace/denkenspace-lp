@@ -1,23 +1,115 @@
-<!-- en/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Denkenspace Inc.</title>
-    <meta name="description" content="Denkenspace Inc. provides web development, system engineering, and food trading business. Bridging Japan’s tradition and IT for the future." />
+    <!-- Basic SEO -->
+    <title>Denkenspace Inc. | Web System Development, SaaS, and Landing Page Design (Yokohama)</title>
+    <meta
+      name="description"
+      content="Denkenspace Inc. is a Yokohama-based engineering company offering web system development, SaaS product development, and landing page design with Laravel, Next.js, and AWS. Over 10 years of backend experience from requirements to operations."
+    />
+    <meta
+      name="keywords"
+      content="Denkenspace, web development, SaaS development, Laravel, Next.js, React, AWS, landing page design, Yokohama web agency"
+    />
+    <meta name="author" content="Denkenspace Inc." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="canonical" href="https://www.denkenspace.com/en/" />
+    <link rel="alternate" hreflang="ja" href="https://www.denkenspace.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.denkenspace.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.denkenspace.com/" />
 
-    <!-- OGP / Twitter Card も英語版にする -->
-    <meta property="og:title" content="Denkenspace Inc." />
-    <meta property="og:description" content="Web development, system engineering, and food trading business." />
-    <meta property="og:image" content="https://your-domain.com/og-image-en.jpg" />
-    <meta property="og:url" content="https://your-domain.com/en" />
+    <!-- Favicons -->
+    <link rel="icon" href="/img/common/logo.png" />
+    <link rel="apple-touch-icon" href="/img/common/logo.png" />
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Denkenspace Inc." />
+    <meta
+      property="og:title"
+      content="Denkenspace Inc. | Web System & SaaS Development"
+    />
+    <meta
+      property="og:description"
+      content="Web systems and SaaS products built with Laravel, Next.js, and AWS. Over 10 years of backend experience from requirements to operations."
+    />
+    <meta property="og:url" content="https://www.denkenspace.com/en/" />
+    <meta
+      property="og:image"
+      content="https://www.denkenspace.com/img/common/logo.png"
+    />
+    <meta property="og:image:alt" content="Denkenspace Inc." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Denkenspace Inc. | Web System & SaaS Development"
+    />
+    <meta
+      name="twitter:description"
+      content="Web systems and SaaS products built with Laravel, Next.js, and AWS."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.denkenspace.com/img/common/logo.png"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.denkenspace.com/#organization",
+            "name": "Denkenspace Inc.",
+            "alternateName": ["株式会社デンケンスペース", "デンケンスペース"],
+            "url": "https://www.denkenspace.com/",
+            "logo": "https://www.denkenspace.com/img/common/logo.png",
+            "foundingDate": "2024-02",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "JP",
+              "postalCode": "220-0004",
+              "addressRegion": "Kanagawa",
+              "addressLocality": "Yokohama-shi Nishi-ku",
+              "streetAddress": "Mutsumi Building 3F, 2-10-48 Kitakochi"
+            },
+            "sameAs": ["https://www.instagram.com/denken_ukulele"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.denkenspace.com/en/#website",
+            "url": "https://www.denkenspace.com/en/",
+            "name": "Denkenspace Inc.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://www.denkenspace.com/#organization" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <!-- これを日本語版と同じにする -->
+    <noscript>
+      <h1>Denkenspace Inc.</h1>
+      <p>
+        Yokohama-based engineering company offering web system development, SaaS product development, and landing page design with Laravel, Next.js, and AWS. Over 10 years of backend experience covering everything from requirements to operations.
+      </p>
+      <p>Services: Web System Development / Landing Page Design / Ukulele Lessons</p>
+      <p>
+        Location: Mutsumi Building 3F, 2-10-48 Kitakochi, Nishi-ku, Yokohama, Kanagawa 220-0004, Japan
+      </p>
+      <p>CEO: Kazuya Yoshida</p>
+      <p>Please enable JavaScript to view the full site.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -17,7 +17,10 @@
     <meta name="author" content="株式会社デンケンスペース" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#0ea5e9" />
-    <link rel="canonical" href="https://denkenspace.com/" />
+    <link rel="canonical" href="https://www.denkenspace.com/" />
+    <link rel="alternate" hreflang="ja" href="https://www.denkenspace.com/" />
+    <link rel="alternate" hreflang="en" href="https://www.denkenspace.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.denkenspace.com/" />
 
     <!-- Favicons -->
     <link rel="icon" href="/img/common/logo.png" />
@@ -34,10 +37,10 @@
       property="og:description"
       content="Laravel・Next.js・AWSによるWebシステム開発と自社SaaS開発。10年以上のバックエンド経験で、要件定義から運用まで一貫対応。"
     />
-    <meta property="og:url" content="https://denkenspace.com/" />
+    <meta property="og:url" content="https://www.denkenspace.com/" />
     <meta
       property="og:image"
-      content="https://denkenspace.com/img/common/logo.png"
+      content="https://www.denkenspace.com/img/common/logo.png"
     />
     <meta property="og:image:alt" content="株式会社デンケンスペース" />
     <meta property="og:locale" content="ja_JP" />
@@ -55,7 +58,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://denkenspace.com/img/common/logo.png"
+      content="https://www.denkenspace.com/img/common/logo.png"
     />
 
     <!-- Structured Data: 会社・代表・サービス -->
@@ -65,13 +68,13 @@
         "@graph": [
           {
             "@type": "Organization",
-            "@id": "https://denkenspace.com/#organization",
+            "@id": "https://www.denkenspace.com/#organization",
             "name": "株式会社デンケンスペース",
             "alternateName": ["デンケンスペース", "Denkenspace Inc."],
-            "url": "https://denkenspace.com/",
-            "logo": "https://denkenspace.com/img/common/logo.png",
+            "url": "https://www.denkenspace.com/",
+            "logo": "https://www.denkenspace.com/img/common/logo.png",
             "foundingDate": "2024-02",
-            "founder": { "@id": "https://denkenspace.com/#ceo" },
+            "founder": { "@id": "https://www.denkenspace.com/#ceo" },
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "JP",
@@ -91,10 +94,10 @@
           },
           {
             "@type": "Person",
-            "@id": "https://denkenspace.com/#ceo",
+            "@id": "https://www.denkenspace.com/#ceo",
             "name": "吉田 利也",
             "jobTitle": "代表取締役",
-            "worksFor": { "@id": "https://denkenspace.com/#organization" },
+            "worksFor": { "@id": "https://www.denkenspace.com/#organization" },
             "knowsAbout": [
               "PHP",
               "Laravel",
@@ -108,11 +111,11 @@
           },
           {
             "@type": "ProfessionalService",
-            "@id": "https://denkenspace.com/#service",
+            "@id": "https://www.denkenspace.com/#service",
             "name": "株式会社デンケンスペース",
-            "url": "https://denkenspace.com/",
+            "url": "https://www.denkenspace.com/",
             "description": "Webシステム開発・SaaSプロダクト開発・ランディングページ制作",
-            "provider": { "@id": "https://denkenspace.com/#organization" },
+            "provider": { "@id": "https://www.denkenspace.com/#organization" },
             "areaServed": { "@type": "Country", "name": "JP" },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -148,11 +151,11 @@
           },
           {
             "@type": "WebSite",
-            "@id": "https://denkenspace.com/#website",
-            "url": "https://denkenspace.com/",
+            "@id": "https://www.denkenspace.com/#website",
+            "url": "https://www.denkenspace.com/",
             "name": "株式会社デンケンスペース",
             "inLanguage": ["ja", "en"],
-            "publisher": { "@id": "https://denkenspace.com/#organization" }
+            "publisher": { "@id": "https://www.denkenspace.com/#organization" }
           }
         ]
       }
@@ -160,6 +163,22 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>株式会社デンケンスペース</h1>
+      <p>
+        横浜のWeb制作・システム開発会社。Laravel・Next.js・AWSを中心としたWebシステム開発、SaaSプロダクト開発、ランディングページ制作を行うエンジニアリングカンパニーです。10年以上のバックエンド開発経験を活かし、要件定義から設計・実装・運用まで一貫対応します。
+      </p>
+      <p>
+        サービス：Webシステム開発／ランディングページ制作／ウクレレ講師
+      </p>
+      <p>
+        所在地：〒220-0004 神奈川県横浜市西区北幸2-10-48 むつみビル3階
+      </p>
+      <p>代表取締役：吉田 利也</p>
+      <p>
+        ※本サイトはJavaScriptを有効にするとフルコンテンツが表示されます。
+      </p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
