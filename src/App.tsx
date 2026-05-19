@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SeoHead from "./components/SeoHead";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import TechMarquee from "./components/TechMarquee";
 import Services from "./components/Services";
 import About from "./components/About";
 import Message from "./components/Message";
@@ -21,12 +22,13 @@ export default function App() {
           <Route
             path="/"
             element={
-              <div className="min-h-screen flex flex-col">
+              <div className="min-h-screen flex flex-col bg-white text-slate-800">
                 <SeoHead />
                 <Header />
-                <main className="pt-20 flex flex-col items-center w-full">
+                <main className="flex flex-col items-center w-full">
                   <Hero />
-                  <section id="services">
+                  <TechMarquee />
+                  <section id="services" className="w-full">
                     <Services />
                   </section>
                   <section id="about">

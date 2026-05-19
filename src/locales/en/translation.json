@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Denkenspace Inc.",
-    "description": "Denkenspace Inc. connects Japanese tradition with IT for the future. We provide web development, landing pages, and Japanese sweets trading.",
-    "keywords": "Denkenspace, web development, landing page, Japanese sweets, trade, IT, Japanese culture",
-    "ogTitle": "Denkenspace Inc.",
-    "ogDescription": "Connecting Japanese tradition and IT for the future.",
-    "ogImage": "/img/ogp-en.png"
+    "title": "Denkenspace Inc. | Web System Development, SaaS, and Landing Page Design (Yokohama)",
+    "description": "Denkenspace Inc. is a Yokohama-based engineering company offering web system development, SaaS product development, and landing page design with Laravel, Next.js, and AWS. 10+ years of backend experience covering everything from requirements to operations.",
+    "keywords": "Denkenspace, web development, SaaS development, Laravel, Next.js, React, AWS, landing page design, Yokohama web agency",
+    "ogTitle": "Denkenspace Inc. | Web System & SaaS Development",
+    "ogDescription": "Web systems and SaaS products built with Laravel, Next.js, and AWS. Over 10 years of backend experience from requirements to operations.",
+    "ogImage": "https://denkenspace.com/img/common/logo.png"
   },
   "header": {
     "logo": "Company Logo",
@@ -17,25 +17,28 @@
   },
   "hero": {
     "title": "Denkenspace Inc.",
-    "subtitle": "The world may hold few pleasures, but joy depends on the heart."
+    "catch": "Turning ideas into reality. Web systems built on solid engineering to power your business.",
+    "subtitle": "Over 10 years of backend experience across requirements, design, implementation, and operations — plus in-house SaaS development."
   },
   "services": {
     "title": "Our Services",
     "items": [
       {
-        "title": "Web Development",
-        "desc": "Web system development with PHP & React",
-        "img": "img/hp/programming.png"
+        "title": "Web System Development",
+        "desc": "Full-cycle development with Laravel, Next.js, and AWS. Extensive experience in SaaS, business systems, and API design.",
+        "img": "/img/hp/programming-cool.jpg"
       },
       {
         "title": "Landing Page Design",
-        "desc": "Building high-quality, conversion-focused pages",
-        "img": "img/hp/lp.png"
+        "desc": "In-house design and development. React/TypeScript for maintainable, expressive pages that convert.",
+        "img": "/img/hp/lp-cool.jpg"
       },
       {
-        "title": "Food & Trading",
-        "desc": "Online sales of Japanese sweets",
-        "img": "img/hp/wagashi.png"
+        "title": "Ukulele Lessons",
+        "desc": "Beginner-friendly ukulele lessons — let's play warm, gentle melodies together.",
+        "img": "/img/hp/ukulele-cool.jpg",
+        "url": "/ukulele",
+        "urlLabel": "Ukulele lesson page"
       }
     ]
   },

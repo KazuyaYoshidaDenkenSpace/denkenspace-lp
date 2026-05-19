@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "株式会社デンケンスペース",
-    "description": "日本の伝統とITで未来をつなぐ株式会社デンケンスペース。Web制作・ランディングページ・食品貿易事業を展開しています。",
-    "keywords": "デンケンスペース, Web制作, ランディングページ, 和菓子, 貿易, IT, 日本文化",
-    "ogTitle": "株式会社デンケンスペース",
-    "ogDescription": "日本の伝統とITで未来をつなぐ株式会社デンケンスペース。",
-    "ogImage": "/img/ogp-ja.png"
+    "title": "株式会社デンケンスペース | Webシステム開発・SaaS開発・ランディングページ制作（横浜）",
+    "description": "株式会社デンケンスペース（横浜）は、Laravel・Next.js・AWSを中心としたWebシステム開発、SaaSプロダクト開発、ランディングページ制作を行うエンジニアリングカンパニーです。10年以上のバックエンド経験で、要件定義から運用まで一貫対応。",
+    "keywords": "株式会社デンケンスペース, デンケンスペース, Web開発, Webシステム開発, Laravel, Next.js, React, AWS, SaaS開発, ランディングページ制作, LP制作, 横浜 Web制作, Web制作会社",
+    "ogTitle": "株式会社デンケンスペース | Webシステム開発・SaaS開発",
+    "ogDescription": "Laravel・Next.js・AWSによるWebシステム開発と自社SaaS開発。10年以上のバックエンド経験で、要件定義から運用まで一貫対応。",
+    "ogImage": "https://denkenspace.com/img/common/logo.png"
   },
   "header": {
     "logo": "会社ロゴ",
@@ -16,26 +16,27 @@
     "contact": "お問い合わせ"
   },
   "hero": {
-    "title": "株式会社\nデンケン\nスペース",
-    "subtitle": "面白きこともなき世に面白くすみなすものは心なりけり"
+    "title": "株式会社\nデンケンスペース",
+    "catch": "想いをカタチに。確かな技術で、ビジネスの成長を支えるWebシステムを。",
+    "subtitle": "10年以上のバックエンド開発経験を活かし、要件定義から設計・実装・運用まで一貫してサポート。SaaSプロダクトの自社開発も行っています。"
   },
   "services": {
     "title": "サービス紹介",
     "items": [
       {
-        "title": "Web制作事業",
-        "desc": "PHP・ReactによるWebシステム開発",
-        "img": "/img/hp/programming.png"
+        "title": "Webシステム開発",
+        "desc": "Laravel・Next.js・AWSを中心に、要件定義から運用まで一貫対応。SaaS・業務システム・API開発の実績多数。",
+        "img": "/img/hp/programming-cool.jpg"
       },
       {
         "title": "ランディングページ制作",
-        "desc": "高品質で成果に繋がるページを構築",
-        "img": "/img/hp/lp.png"
+        "desc": "デザインから実装まで内製。React/TypeScriptで保守性と表現力を両立し、成果に繋がるページを構築。",
+        "img": "/img/hp/lp-cool.jpg"
       },
       {
         "title": "ウクレレ講師",
         "desc": "初心者向けウクレレ教室 - やさしい音色を一緒に奏でましょう",
-        "img": "/img/hp/ukulele.png",
+        "img": "/img/hp/ukulele-cool.jpg",
         "url": "/ukulele",
         "urlLabel": "ウクレレ教室ホームページ"
       }

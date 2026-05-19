@@ -2,32 +2,161 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="img/common/logo.png" />
-
-    <!-- スマホ対応 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- タイトル -->
-    <title>株式会社デンケンスペース | Web制作</title>
-
-    <!-- 検索結果に出る説明文 -->
+    <!-- Basic SEO -->
+    <title>株式会社デンケンスペース | Webシステム開発・SaaS開発・ランディングページ制作（横浜）</title>
     <meta
       name="description"
-      content="株式会社デンケンスペースは、Web制作・システム開発・食品貿易事業を展開しています。日本の伝統とITで未来をつなぐ会社です。"
+      content="株式会社デンケンスペース（横浜）は、Laravel・Next.js・AWSを中心としたWebシステム開発、SaaSプロダクト開発、ランディングページ制作を行うエンジニアリングカンパニーです。10年以上のバックエンド経験で、要件定義から運用まで一貫対応。"
+    />
+    <meta
+      name="keywords"
+      content="株式会社デンケンスペース,デンケンスペース,Web開発,Webシステム開発,Laravel,Next.js,React,AWS,SaaS開発,ランディングページ制作,LP制作,横浜 Web制作,Web制作会社"
+    />
+    <meta name="author" content="株式会社デンケンスペース" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="canonical" href="https://denkenspace.com/" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/img/common/logo.png" />
+    <link rel="apple-touch-icon" href="/img/common/logo.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="株式会社デンケンスペース" />
+    <meta
+      property="og:title"
+      content="株式会社デンケンスペース | Webシステム開発・SaaS開発"
+    />
+    <meta
+      property="og:description"
+      content="Laravel・Next.js・AWSによるWebシステム開発と自社SaaS開発。10年以上のバックエンド経験で、要件定義から運用まで一貫対応。"
+    />
+    <meta property="og:url" content="https://denkenspace.com/" />
+    <meta
+      property="og:image"
+      content="https://denkenspace.com/img/common/logo.png"
+    />
+    <meta property="og:image:alt" content="株式会社デンケンスペース" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="株式会社デンケンスペース | Webシステム開発・SaaS開発"
+    />
+    <meta
+      name="twitter:description"
+      content="Laravel・Next.js・AWSによるWebシステム開発と自社SaaS開発。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://denkenspace.com/img/common/logo.png"
     />
 
-    <!-- SNSシェア用（OGP） -->
-    <meta property="og:title" content="株式会社デンケンスペース" />
-    <meta property="og:description" content="Web制作・システム開発。" />
-    <meta property="og:image" content="https://your-domain.com/og-image.jpg" />
-    <meta property="og:url" content="https://your-domain.com" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitterカード -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="株式会社デンケンスペース" />
-    <meta name="twitter:description" content="Web制作・システム開発。" />
-    <meta name="twitter:image" content="https://your-domain.com/og-image.jpg" />
+    <!-- Structured Data: 会社・代表・サービス -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://denkenspace.com/#organization",
+            "name": "株式会社デンケンスペース",
+            "alternateName": ["デンケンスペース", "Denkenspace Inc."],
+            "url": "https://denkenspace.com/",
+            "logo": "https://denkenspace.com/img/common/logo.png",
+            "foundingDate": "2024-02",
+            "founder": { "@id": "https://denkenspace.com/#ceo" },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "JP",
+              "postalCode": "220-0004",
+              "addressRegion": "神奈川県",
+              "addressLocality": "横浜市西区",
+              "streetAddress": "北幸2-10-48 むつみビル 3階"
+            },
+            "sameAs": [
+              "https://www.instagram.com/denken_ukulele"
+            ],
+            "subOrganization": {
+              "@type": "EducationalOrganization",
+              "name": "デンケンウクレレ教室",
+              "url": "https://ukulele.denkenspace.com/"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://denkenspace.com/#ceo",
+            "name": "吉田 利也",
+            "jobTitle": "代表取締役",
+            "worksFor": { "@id": "https://denkenspace.com/#organization" },
+            "knowsAbout": [
+              "PHP",
+              "Laravel",
+              "Next.js",
+              "React",
+              "TypeScript",
+              "AWS",
+              "Rust",
+              "SaaS開発"
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://denkenspace.com/#service",
+            "name": "株式会社デンケンスペース",
+            "url": "https://denkenspace.com/",
+            "description": "Webシステム開発・SaaSプロダクト開発・ランディングページ制作",
+            "provider": { "@id": "https://denkenspace.com/#organization" },
+            "areaServed": { "@type": "Country", "name": "JP" },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Webシステム開発",
+                    "description": "Laravel・Next.js・AWSを中心に、要件定義から設計・実装・運用まで一貫対応。SaaS・業務システム・API開発の実績多数。"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "ランディングページ制作",
+                    "description": "デザインから実装まで内製。React/TypeScriptで保守性と表現力を両立し、成果に繋がるページを構築。"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "ウクレレ講師",
+                    "description": "初心者向けウクレレ教室。横浜・大田区で開催。",
+                    "url": "https://ukulele.denkenspace.com/"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://denkenspace.com/#website",
+            "url": "https://denkenspace.com/",
+            "name": "株式会社デンケンスペース",
+            "inLanguage": ["ja", "en"],
+            "publisher": { "@id": "https://denkenspace.com/#organization" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

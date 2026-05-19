@@ -1,82 +1,110 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
-  // i18n の機能を呼び出し
-  // t: 翻訳関数, i18n: 言語情報や切替を扱う
   const { t, i18n } = useTranslation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const navItems = [
+    { href: "#services", label: t("header.services", "サービス紹介") },
+    { href: "#about", label: t("header.about", "会社情報") },
+    { href: "#message", label: t("header.message", "代表メッセージ") },
+  ];
 
   return (
-    // ヘッダー全体
-    <header className="fixed top-0 w-full z-50 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-2xl backdrop-blur-sm">
-      {/* 横幅を max-w-6xl に制限しつつ中央寄せ。高さ h-20 */}
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-xl border-b border-slate-200/70 shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-6xl mx-auto flex items-center justify-between h-20 px-6">
-        {/* 左側：ロゴ */}
-        <div className="text-3xl font-extrabold tracking-wide">
-          {/* 画像として表示 */}
+        {/* ロゴ */}
+        <a href="#" className="flex items-center gap-2">
           <img
             src={t("header.logoImg", "/img/common/logo.png")}
             alt={t("header.logo", "会社ロゴ")}
-            className="h-12" // 高さを調整
+            className="h-10"
           />
-        </div>
+        </a>
 
-        {/* 右側：ナビゲーション + 言語切替ボタン */}
-        <div className="flex items-center space-x-6">
-          {/* ナビゲーションメニュー */}
-          <nav className="space-x-8">
-            <a
-              href="#services"
-              className="text-white hover:text-gray-300 font-medium transition-colors duration-300"
-            >
-              {t("header.services", "サービス紹介")}
-            </a>
-            <a
-              href="#about"
-              className="text-white hover:text-gray-300 font-medium transition-colors duration-300"
-            >
-              {t("header.about", "会社情報")}
-            </a>
-            <a
-              href="#message"
-              className="text-white hover:text-gray-300 font-medium transition-colors duration-300"
-            >
-              {t("header.message", "代表メッセージ")}
-            </a>
-            <a
-              href="#contact"
-              className="text-white hover:text-gray-300 font-medium transition-colors duration-300"
-            >
-              {t("header.contact", "お問い合わせ")}
-            </a>
+        {/* ナビゲーション + 言語切替 */}
+        <div className="hidden md:flex items-center gap-3">
+          <nav className="flex items-center gap-1">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="relative px-3 py-1.5 text-sm font-semibold text-slate-600 hover:text-sky-600 transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
-          {/* 言語切替ボタン */}
-          <div className="flex space-x-2">
-            {/* 日本語ボタン */}
+          {/* 言語切替 */}
+          <div className="flex items-center rounded-full border border-slate-200 bg-white/80 p-1 backdrop-blur-md shadow-sm">
             <button
               onClick={() => i18n.changeLanguage("ja")}
-              className={`px-3 py-1 text-sm rounded-full transition font-semibold ${
+              className={`px-3 py-1 text-xs rounded-full transition-all font-bold ${
                 i18n.language === "ja"
-                  ? "bg-cyan-400 text-slate-900 shadow-lg" // 選択中はシアン
-                  : "bg-white/10 text-white hover:bg-white/20 backdrop-blur"
+                  ? "bg-gradient-to-r from-sky-500 to-emerald-500 text-white shadow"
+                  : "text-slate-500 hover:text-slate-700"
               }`}
             >
-              日本語
+              JA
             </button>
-
-            {/* 英語ボタン */}
             <button
               onClick={() => i18n.changeLanguage("en")}
-              className={`px-3 py-1 text-sm rounded-full transition font-semibold ${
+              className={`px-3 py-1 text-xs rounded-full transition-all font-bold ${
                 i18n.language === "en"
-                  ? "bg-cyan-400 text-slate-900 shadow-lg" // 選択中はシアン
-                  : "bg-white/10 text-white hover:bg-white/20 backdrop-blur"
+                  ? "bg-gradient-to-r from-sky-500 to-emerald-500 text-white shadow"
+                  : "text-slate-500 hover:text-slate-700"
               }`}
             >
               EN
             </button>
           </div>
+
+          {/* CTA */}
+          <a
+            href="#contact"
+            className="ml-1 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-sky-500 to-emerald-500 px-4 py-2 text-xs font-bold text-white shadow-sm hover:shadow-md transition-shadow"
+          >
+            お問い合わせ
+          </a>
+        </div>
+
+        {/* モバイル：言語切替のみ */}
+        <div className="md:hidden flex items-center rounded-full border border-slate-200 bg-white/80 p-1 backdrop-blur-md shadow-sm">
+          <button
+            onClick={() => i18n.changeLanguage("ja")}
+            className={`px-2.5 py-1 text-xs rounded-full font-bold ${
+              i18n.language === "ja"
+                ? "bg-gradient-to-r from-sky-500 to-emerald-500 text-white"
+                : "text-slate-500"
+            }`}
+          >
+            JA
+          </button>
+          <button
+            onClick={() => i18n.changeLanguage("en")}
+            className={`px-2.5 py-1 text-xs rounded-full font-bold ${
+              i18n.language === "en"
+                ? "bg-gradient-to-r from-sky-500 to-emerald-500 text-white"
+                : "text-slate-500"
+            }`}
+          >
+            EN
+          </button>
         </div>
       </div>
     </header>

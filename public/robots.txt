@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# /ukulele は ukulele.denkenspace.com にリダイレクトされる
+Disallow: /ukulele
+
+Sitemap: https://denkenspace.com/sitemap.xml

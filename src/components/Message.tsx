@@ -1,62 +1,65 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Quote } from "lucide-react";
 
 const Message: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
 
   return (
-    <section
-      id="message"
-      className="w-full max-w-5xl mx-auto px-6 py-16 text-center"
-    >
-      {/* ボタンを押すと代表メッセージが開閉する */}
-      <button
-        className="px-8 py-4 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-bold rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 text-lg"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {t("message.title", "代表メッセージ")}
-      </button>
+    <section className="w-full bg-white py-24">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* セクションヘッダー */}
+        <div className="text-center mb-16">
+          <p className="text-xs font-bold tracking-[0.3em] text-sky-600 mb-3">
+            MESSAGE
+          </p>
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
+            {t("message.title", "代表メッセージ")}
+          </h2>
+          <div className="mt-6 mx-auto h-px w-16 bg-gradient-to-r from-transparent via-sky-400 to-transparent" />
+        </div>
 
-      {/* アニメーション付きで開閉 */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="mt-6 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl shadow-2xl border border-white/10"
-          >
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              {/* 写真 */}
-              <div className="w-full md:w-1/3 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-50 via-white to-emerald-50 border border-slate-200 shadow-[0_10px_40px_-15px_rgba(14,165,233,0.25)]"
+        >
+          {/* 装飾オーブ */}
+          <div className="pointer-events-none absolute -top-20 -right-20 h-60 w-60 rounded-full bg-sky-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-emerald-200/40 blur-3xl" />
+
+          <div className="relative grid md:grid-cols-[260px_1fr] gap-8 p-8 md:p-12 items-center">
+            {/* 写真 */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-sky-400 to-emerald-400 opacity-30 blur" />
                 <img
                   src="/img/hp/ceo.png"
                   alt="代表写真"
-                  className="rounded-2xl shadow-lg w-48 h-48 object-cover md:w-64 md:h-64"
+                  className="relative w-44 h-44 md:w-56 md:h-56 rounded-full object-cover ring-4 ring-white shadow-lg"
                 />
               </div>
+            </div>
 
-              {/* テキスト */}
-              <div className="w-full md:w-2/3 text-left">
-                <h2 className="text-2xl font-bold mb-6 text-white">
-                  {t("message.title", "代表挨拶")}
-                </h2>
-                <p className="text-lg text-slate-200 leading-relaxed whitespace-pre-line">
-                  {t("message.body", "ここに代表の言葉が入ります。")}
+            {/* テキスト */}
+            <div>
+              <Quote className="h-8 w-8 text-sky-300 mb-3" />
+              <p className="text-base md:text-lg text-slate-700 leading-relaxed whitespace-pre-line">
+                {t("message.body")}
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <div className="h-px flex-1 bg-slate-200" />
+                <p className="font-bold text-slate-900">
+                  {t("message.ceo", "代表取締役 吉田 利也")}
                 </p>
-                <div className="mt-6 text-right">
-                  <p className="font-semibold text-cyan-300">
-                    {t("message.ceo", "代表取統逸 吉田 利也")}
-                  </p>
-                </div>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 };
