@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
   return (
     <section
       onMouseMove={onSectionMove}
-      className="relative w-screen min-h-screen overflow-hidden bg-gradient-to-b from-white via-sky-50 to-emerald-50/60"
+      className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-white via-sky-50 to-emerald-50/60"
     >
       {/* マウス追従スポットライト (デスクトップのみ・モバイルでは負荷削減) */}
       <motion.div
@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
       {/* コンテンツ */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24 grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-10 items-center">
         {/* 左：テキスト */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="min-w-0 flex flex-col items-center lg:items-start text-center lg:text-left">
           {/* バッジ */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -197,7 +197,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* 右：コードウィンドウ */}
-        <div className="relative flex justify-center lg:justify-end">
+        <div className="relative min-w-0 flex justify-center lg:justify-end">
           {/* 浮遊バッジ */}
           <motion.div
             aria-hidden
