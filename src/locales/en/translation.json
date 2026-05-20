@@ -18,7 +18,9 @@
   "hero": {
     "title": "Denkenspace Inc.",
     "catch": "Turning ideas into reality. Web systems built on solid engineering to power your business.",
-    "subtitle": "Over 10 years of backend experience across requirements, design, implementation, and operations — plus in-house SaaS development."
+    "subtitle": "Over 10 years of backend experience across requirements, design, implementation, and operations — plus in-house SaaS development.",
+    "ctaPrimary": "Get a free consultation",
+    "ctaSecondary": "View services"
   },
   "services": {
     "title": "Our Services",

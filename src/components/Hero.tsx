@@ -186,11 +186,11 @@ const Hero: React.FC = () => {
           >
             <MagneticButton href="#contact" primary>
               <Sparkles className="h-4 w-4" />
-              <span>無料で相談する</span>
+              <span>{t("hero.ctaPrimary", "無料で相談する")}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </MagneticButton>
             <MagneticButton href="#services">
-              <span>サービスを見る</span>
+              <span>{t("hero.ctaSecondary", "サービスを見る")}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </MagneticButton>
           </motion.div>
