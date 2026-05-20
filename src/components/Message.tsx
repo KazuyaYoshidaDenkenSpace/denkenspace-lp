@@ -37,8 +37,12 @@ const Message: React.FC = () => {
               <div className="relative">
                 <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-sky-400 to-emerald-400 opacity-30 blur" />
                 <img
-                  src="/img/hp/ceo.png"
+                  src="/img/hp/ceo.jpg"
                   alt="代表写真"
+                  width={224}
+                  height={224}
+                  loading="lazy"
+                  decoding="async"
                   className="relative w-44 h-44 md:w-56 md:h-56 rounded-full object-cover ring-4 ring-white shadow-lg"
                 />
               </div>

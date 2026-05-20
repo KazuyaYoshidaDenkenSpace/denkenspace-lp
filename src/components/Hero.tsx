@@ -65,23 +65,27 @@ const Hero: React.FC = () => {
       onMouseMove={onSectionMove}
       className="relative w-screen min-h-screen overflow-hidden bg-gradient-to-b from-white via-sky-50 to-emerald-50/60"
     >
-      {/* マウス追従スポットライト */}
+      {/* マウス追従スポットライト (デスクトップのみ・モバイルでは負荷削減) */}
       <motion.div
         aria-hidden
         style={{ background: bg }}
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 hidden md:block"
       />
 
-      {/* 柔らかいグラデーションオーブ */}
+      {/* 柔らかいグラデーションオーブ (モバイルは小さめ静的・デスクトップはアニメ) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -left-24 h-[280px] w-[280px] rounded-full bg-sky-200/50 blur-[90px] md:hidden"
+      />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-sky-200/60 blur-[120px]"
+        className="pointer-events-none absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-sky-200/60 blur-[120px] hidden md:block"
         animate={{ x: [0, 60, -20, 0], y: [0, 40, -30, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -right-32 h-[560px] w-[560px] rounded-full bg-emerald-200/60 blur-[140px]"
+        className="pointer-events-none absolute -bottom-40 -right-32 h-[560px] w-[560px] rounded-full bg-emerald-200/60 blur-[140px] hidden md:block"
         animate={{ x: [0, -50, 30, 0], y: [0, -30, 40, 0] }}
         transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -126,7 +130,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[4.2rem] xl:text-[5rem] font-black tracking-tight leading-[1.05] text-slate-900"
+            className="text-[2rem] sm:text-6xl md:text-7xl lg:text-[4.2rem] xl:text-[5rem] font-black tracking-tight leading-[1.1] text-slate-900"
           >
             {t("hero.title")
               .split("\n")

@@ -9,7 +9,14 @@ const Footer: React.FC = () => {
     <footer className="bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
-          <img src="/img/common/logo.png" alt="logo" className="h-8" />
+          <img
+            src="/img/common/logo.png"
+            alt="logo"
+            width={30}
+            height={32}
+            loading="lazy"
+            className="h-8 w-auto"
+          />
           <p className="text-xs text-slate-500">
             {t("footer.copy", "© 2026 株式会社デンケンスペース. All rights reserved.")}
           </p>

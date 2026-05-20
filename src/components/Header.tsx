@@ -32,7 +32,10 @@ const Header: React.FC = () => {
           <img
             src={t("header.logoImg", "/img/common/logo.png")}
             alt={t("header.logo", "会社ロゴ")}
-            className="h-10"
+            width={38}
+            height={40}
+            fetchPriority="high"
+            className="h-10 w-auto"
           />
         </a>
 
